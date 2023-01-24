@@ -10,16 +10,18 @@ import {
   Route,
   useRouteError
 } from 'react-router-dom';
+
 const router = createBrowserRouter([
-  createRoutesFromElements(
-    <Route path="https://redninjale.github.io/" element={<App/>} errorElement={<ErrorBoundary/>}/>
-  )
-])
+  // createRoutesFromElements(
+    // <Route path="/" element={<App/>} errorElement={<ErrorBoundary/>}/>
+  // )
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+    <App/>
   </React.StrictMode>
 );
 
