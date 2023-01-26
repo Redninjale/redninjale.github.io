@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&family=Righteous&display=swap');
+
+.HomeContainer {
+    height: 800px;
+    width: 100%;
+    margin-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+a {
+    scroll-behavior: smooth;
+}
+
+.HomeBackground {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    background-image: url('../../public/background.jpg');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+}
+
+.HomeBackgroundOverlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.HomeContent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+img.HomeImage {
+    margin-top: 40px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+h1.HomeName {
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 125px;
+    font-weight: 100px;
+    letter-spacing: 30px;
+    height: 130px;
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 0.8;
+    text-align: center;
+    color: white;
+}
+
+h1.HomeList {
+    margin-top: 0px;
+    font-family: 'Righteous', sans-serif;
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.HomeLM a {
+    display: block;
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    padding: 10px 20px;
+    border: 3px solid rgb(84, 151, 212);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.HomeLM a:hover {
+    background-color: #949ba0;
+    color: black;
+}
