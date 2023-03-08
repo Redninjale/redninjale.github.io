@@ -1,19 +1,204 @@
-div.WorkContainer {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 1000px;
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
 }
 
-div.WorkGrid {
-    display: grid;
-    grid-template-columns: minmax(0, 4);
+.WorkContainer::before {
+  content: "";
+  height: 300px;
+  width: 100vw;
 }
 
-.CardContainer {
-    display: flex;
-    background-color: #191919;
-    height: 300px;
-    width: 25%;
-    border-radius: 10px;
+.WorkContainer {
+  background: linear-gradient(#668487, #a0a4b9, #668487);
+  height: fit-content;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+body {
+  background-color: #03011f;
+  font-family: "Open sans", "sans-serif";
+  color: #fff;
+}
+/* Work Experiences */
+
+.swiper {
+  width: 99vw;
+  height: 80vh;
+}
+
+.swiper-slide img {
+  display: block;
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: black;
+  color: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span.swiper-pagination-bullet {
+  background-color: white;
+}
+
+/* span.swiper-pagination-bullet-active {
+  font-family: "Rubik Mono One";
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  left: -20px;
+  width: 60px;
+  height: 20px;
+  color: #668487;
+  background-color: #fff;
+  border-radius: 0;
+} */
+
+.swiper-button-next,
+.swiper-button-prev {
+  left: 50%;
+  transform: rotate(90deg);
+  transform-origin: left center;
+  opacity: 25%;
+}
+
+.swiper-button-next {
+  top: auto;
+  bottom: 10px;
+}
+
+.swiper-button-prev {
+  top: 10px;
+}
+
+/* Projects */
+
+h1 {
+  font-family: "Rubik Mono One", "sans-serif";
+  text-align:center;
+  font-size: 80px;
+  letter-spacing: 10px;
+  margin: 10px 0;
+}
+
+ul.CardList {
+  padding: 50px 0;
+}
+
+ul.CardList li {
+  position:relative;
+  list-style-type: none;
+  width: 6px;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+ul.CardList li::after {
+  background: white;
+  border: 5px white;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 50%;
+}
+
+ul.CardList li.hover::after {
+  background: orange;
+  border: 4px solid white;
+  transform: translateX(-50%);
+  transition: background 0.3s ease-in-out,
+  border 0.3s ease-in-out;
+}
+
+
+
+ul.CardList li div{
+  position: relative;
+  width: 500px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background: rgba(42,50,113, .28);
+}
+
+ul.CardList li:nth-child(odd) div {
+  left: 45px;
+}
+
+ul.CardList li:nth-child(even) div {
+  left: -545px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+img.HideImg {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+img.ShowImg {
+  visibility: visible;
+  height: 10%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+ul.CardList li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .6s ease-in-out;
+}
+
+ul.CardList li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+ul.CardList li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+ul.CardList li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1100px) {
+  ul.CardList li div {
+    width: 250px;
+  }
+  ul.CardList li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
 }

@@ -1,0 +1,26 @@
+* {
+    font-family: "Open sans", "sans-serif";
+    color: white;
+}
+
+.FooterContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #191919;
+}
+
+div.FooterContainer h1 {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+}
+
+div.FooterContainer a {
+    text-decoration: underline;
+    color: #668487;
+}

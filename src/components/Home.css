@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&family=Righteous&display=swap');
 
 .HomeContainer {
-    height: 800px;
+    height: calc(100vh - 75px);
     width: 100%;
     margin-top: 75px;
     display: flex;
@@ -16,19 +16,19 @@ a {
 }
 
 .HomeBackground {
-    height: 100%;
+    height: calc(100vh - 75px);
     width: 100%;
     position: absolute;
     top:0;
     background-image: url('../../public/background.jpg');
-    background-color: black;
+    background-color: #668487;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.75;
 }
 
 .HomeBackgroundOverlay {
-    height: 100%;
+    height: calc(100vh - 75px);
     width: 100%;
     position: absolute;
     top:0;
@@ -56,10 +56,10 @@ img.HomeImage {
 }
 
 h1.HomeName {
-    font-family: 'Permanent Marker', sans-serif;
+    /* font-family: 'Permanent Marker', sans-serif; */
+    font-family: 'Rubik Mono One', sans-serif;
     font-size: 125px;
     font-weight: 100px;
-    letter-spacing: 30px;
     height: 130px;
     width: 80%;
     margin-top: 0px;
@@ -71,7 +71,7 @@ h1.HomeName {
 
 h1.HomeList {
     margin-top: 0px;
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: white;
     font-weight: 100;
     font-size: 25px;
