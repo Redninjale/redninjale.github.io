@@ -10,7 +10,7 @@ function Header() {
                 <ul className='NavList'>
                     <li className='NavLItem'><a className='NavLink' href='#Home'>Home</a></li>
                     <li className='NavLItem'><a className='NavLink' href='#AboutMe'>About Me</a></li>
-                    <li className='NavLItem'><a className='NavLink' href='#Work'>Work</a></li>
+                    <li className='NavLItem'><a className='NavLink' href='#Projects'>Projects</a></li>
                     {/* <li className='NavLItem'><a className='NavLink' href='/'>Projects</a></li> */}
                     <li className='NavLItem'><a className='NavLink' href='#Footer'>Contact</a></li>
                 </ul>

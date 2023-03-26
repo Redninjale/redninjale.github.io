@@ -6,38 +6,47 @@
   margin-top: 0px;
 }
 
-.WorkContainer::before {
-  content: "";
-  height: 300px;
-  width: 100vw;
+.ProjectsContainer {
+  padding-top: 80px;
 }
 
-.WorkContainer {
-  background: linear-gradient(#668487, #a0a4b9, #668487);
-  height: fit-content;
-  margin-top: 60px;
-  margin-bottom: 100px;
+h1 {
+  font-family: var(--header), "sans-serif";
+  text-align:center;
+  font-size: 80px;
+  letter-spacing: 10px;
+  margin: 1% auto;
 }
 
 body {
-  background-color: #03011f;
-  font-family: "Open sans", "sans-serif";
+  background-color: var(--grey-bg);
+  font-family: var(--text), "sans-serif";
   color: #fff;
 }
-/* Work Experiences */
 
-.swiper {
-  width: 99vw;
-  height: 80vh;
+/* Professional Experiences */
+.ProffesionalContainer {
+  background-color: #575b60;
+  height: fit-content;
+  width: 100%;
 }
 
-.swiper-slide img {
+div.ProffesionalContainer h1 {
+  background-color: var(--grey-bg);
+}
+
+.swiper {
+  width: 100%;
+  height: 70vh;
+}
+
+img.swiper-slide{
   display: block;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: -1;
   top: 0;
-  left: 0;
+  left: 0%;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -45,9 +54,7 @@ body {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: black;
-  color: #fff;
+  background: linear-gradient(90deg,#393c41, #242628,black, #242628, #393c41);
 
   /* Center slide text vertically */
   display: flex;
@@ -59,25 +66,13 @@ span.swiper-pagination-bullet {
   background-color: white;
 }
 
-/* span.swiper-pagination-bullet-active {
-  font-family: "Rubik Mono One";
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 0;
-  left: -20px;
-  width: 60px;
-  height: 20px;
-  color: #668487;
-  background-color: #fff;
-  border-radius: 0;
-} */
-
 .swiper-button-next,
 .swiper-button-prev {
   left: 50%;
   transform: rotate(90deg);
   transform-origin: left center;
-  opacity: 25%;
+  opacity: 75%;
+  color: #fff;
 }
 
 .swiper-button-next {
@@ -89,14 +84,62 @@ span.swiper-pagination-bullet {
   top: 10px;
 }
 
-/* Projects */
+.swiper-container {
+  width: 40%;
+  height: 90%;
+  color: #fff;
+  outline: #242628;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: center;
+}
 
-h1 {
-  font-family: "Rubik Mono One", "sans-serif";
-  text-align:center;
-  font-size: 80px;
-  letter-spacing: 10px;
-  margin: 10px 0;
+.swiper-title-container {
+  font-family: var(--header), 'sans-serif';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(8vw - 10px);
+}
+
+.swiper-icon{
+  max-height: 5rem;
+  max-width: 5rem;
+  opacity: 100%;
+}
+
+.swiper-title {
+  font-size: 7vw;
+}
+
+.swiper-subtitle {
+  font-size: 1.75vw;
+  position: relative;
+}
+
+.swiper-subtitle::after {
+  position: absolute;
+  top: calc(1.5vw + 12px);
+  left: 12.5%;
+  content: "";
+  border: 1px solid #fff;
+  /* border-radius: 30%; */
+  height: 1px;
+  width: 75%;
+}
+.swiper-context {
+  margin-top: 10px;
+  font-size: 1.1vw;
+}
+
+/* Personal Projects */
+.PersonalContainer {
+  background: linear-gradient(var(--blue-bg), #a0a4b9, var(--blue-bg));
+  height: fit-content;
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 
 ul.CardList {

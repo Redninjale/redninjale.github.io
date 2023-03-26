@@ -1,7 +1,7 @@
 div.AboutContainer {
     background-color: #668487;
     padding-top: 90px;
-    height: calc(100vh + 75px);
+    height: fit-content;
     width: 100%;
 }
 
@@ -28,9 +28,9 @@ div.AboutContainer div.AboutLeft {
 }
 
 div.AboutLeft img {
-    aspect-ratio: 16 / 9;
-    max-width: 20vw;
-    height: 40vh;
+    max-width: 60%;
+    width: 60%;
+    height: calc(30vw);
     border-radius: 5px;
 }
 
@@ -40,6 +40,8 @@ div.AboutContainer div.AboutRight {
     font-family: "Open sans", 'sans-serif';
     font-size: 16px;
     overflow-wrap: normal;
+    padding-top: 3%;
+    padding-right: 5%;
 }
 
 div.AboutContainer p {

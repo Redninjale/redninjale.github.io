@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&family=Righteous&display=swap');
 
 .HomeContainer {
-    height: calc(100vh - 75px);
+    height: calc(100vh);
     width: 100%;
-    margin-top: 75px;
+    padding-top: 75px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -19,7 +19,7 @@ a {
     height: calc(100vh - 75px);
     width: 100%;
     position: absolute;
-    top:0;
+    top:75;
     background-image: url('../../public/background.jpg');
     background-color: #668487;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@ a {
     height: calc(100vh - 75px);
     width: 100%;
     position: absolute;
-    top:0;
+    top: 75;
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,9 +58,9 @@ img.HomeImage {
 h1.HomeName {
     /* font-family: 'Permanent Marker', sans-serif; */
     font-family: 'Rubik Mono One', sans-serif;
-    font-size: 125px;
+    font-size: 10vw;
     font-weight: 100px;
-    height: 130px;
+    height: 20%;
     width: 80%;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -74,7 +74,7 @@ h1.HomeList {
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-weight: 100;
-    font-size: 25px;
+    font-size: 2vw;
 }
 
 .HomeLM a {

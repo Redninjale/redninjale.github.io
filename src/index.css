@@ -18,3 +18,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --header: 'Rubik Mono One';
+  --text: "Open Sans";
+  --blue-bg: #668487;
+  --grey-bg: #191919;
+}
