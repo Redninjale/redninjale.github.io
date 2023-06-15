@@ -13,6 +13,11 @@
       "sizes": "64x64"
     },
     {
+      "src": "github_black.svg",
+      "type": "image/svg",
+      "sizes": "500x500"
+    },
+    {
       "src": "portrait.jpg",
       "type": "image/jpg",
       "sizes": "618x642"
@@ -23,6 +28,16 @@
       "sizes": "993x1343"
     },
     {
+      "src": "portrait_3.jpg",
+      "type": "image/jpg",
+      "sizes": "993x1343"
+    },
+    {
+      "src": "email_black.svg",
+      "type": "image/svg",
+      "sizes": "993x1343"
+    },
+    {
       "src": "email.svg",
       "type": "image/svg",
       "sizes": "500x500"
@@ -30,6 +45,26 @@
     {
       "src": "resume.svg",
       "type": "image/svg",
+      "sizes": "500x500"
+    },
+    {
+      "src": "resum_black.svg",
+      "type": "image/svg",
+      "sizes": "500x500"
+    },
+    {
+      "src": "RT_bg.PNG",
+      "type": "image/PNG",
+      "sizes": "500x500"
+    },
+    {
+      "src": "AA_bg.PNG",
+      "type": "image/PNG",
+      "sizes": "500x500"
+    },
+    {
+      "src": "AN_bg.PNG",
+      "type": "image/PNG",
       "sizes": "500x500"
     },
     {
