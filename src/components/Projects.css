@@ -7,21 +7,27 @@
 }
 
 .ProjectsContainer {
-  padding-top: 80px;
+  position: relative;
+  background-color: var(--project-bg);
+}
+
+div.ProjectsAnchor {
+  position: absolute;
+  content: "";
+  visibility: visible;
+  top: -90px;
 }
 
 h1 {
-  font-family: var(--header), "sans-serif";
+  font-family: var(--rubik), "sans-serif";
   text-align:center;
-  font-size: 80px;
-  letter-spacing: 10px;
-  margin: 1% auto;
-}
-
-body {
-  background-color: var(--grey-bg);
-  font-family: var(--text), "sans-serif";
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: uppercase;
   color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Professional Experiences */
@@ -32,12 +38,14 @@ body {
 }
 
 div.ProffesionalContainer h1 {
-  background-color: var(--grey-bg);
+  background-color: var(--projects-bg);
 }
 
 .swiper {
   width: 100%;
   height: 70vh;
+  color: #fff;
+
 }
 
 img.swiper-slide{
@@ -55,7 +63,7 @@ img.swiper-slide{
 .swiper-slide {
   text-align: center;
   background: linear-gradient(90deg,#393c41, #242628,black, #242628, #393c41);
-
+  color: #fff;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -97,7 +105,7 @@ span.swiper-pagination-bullet {
 }
 
 .swiper-title-container {
-  font-family: var(--header), 'sans-serif';
+  font-family: var(--rubik), 'sans-serif';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,11 +120,13 @@ span.swiper-pagination-bullet {
 
 .swiper-title {
   font-size: 7vw;
+  color: #fff;
 }
 
 .swiper-subtitle {
   font-size: 1.75vw;
   position: relative;
+  color: #fff;
 }
 
 .swiper-subtitle::after {
@@ -131,15 +141,15 @@ span.swiper-pagination-bullet {
 }
 .swiper-context {
   margin-top: 10px;
-  font-size: 1.1vw;
+  font-size: max(1.1vw, 15px);
+  color: #fff;
 }
 
 /* Personal Projects */
 .PersonalContainer {
-  background: linear-gradient(var(--blue-bg), #a0a4b9, var(--blue-bg));
+  /* background: linear-gradient(var(--blue-bg), #a0a4b9, var(--blue-bg)); */
   height: fit-content;
   margin-top: 60px;
-  margin-bottom: 100px;
 }
 
 ul.CardList {
@@ -184,7 +194,7 @@ ul.CardList li div{
   padding: 15px;
   border-radius: 5px;
   bottom: 0;
-  background: rgba(42,50,113, .28);
+  background: rgb(255, 255, 255);
 }
 
 ul.CardList li:nth-child(odd) div {
@@ -196,10 +206,20 @@ ul.CardList li:nth-child(even) div {
 }
 
 time {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  font-family: var(--rubik);
+  font-size: 20px;
   display: block;
   margin-bottom: 10px;
+}
+
+li.CardItem p {
+  color: black;
+  font-weight: 300;
+  font-family: var(--rubik);
+  font-size: 17.5px;
 }
 
 img.HideImg {

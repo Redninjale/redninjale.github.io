@@ -54,7 +54,8 @@ function Projects() {
   
   
   return (
-    <div className='ProjectsContainer' id="Projects">
+    <div className='ProjectsContainer'>
+      <div className="ProjectsAnchor" id="Projects"></div>
       <div className='ProfessionalContainer'>
         <h1>Professional Projects</h1>
         <Slider/>

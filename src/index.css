@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&family=Righteous&display=swap');
-
 body {
   margin: 0;
-  font-family: 'Open Sans', 'Permanent Marker', 'Righteous', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,16 +9,13 @@ body {
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  color: black;
 }
 
 :root {
-  --header: 'Rubik Mono One';
-  --text: "Open Sans";
-  --blue-bg: #668487;
-  --grey-bg: #191919;
+  --rubik-mono: 'Rubik Mono One';
+  --rubik: 'Rubik';
+  --main-bg: #ffffff;
+  --project-bg: #a6bea6;
+  --header-bg: #191919;
 }
