@@ -99,12 +99,12 @@ function Card(prop) {
     )
 }
 
-function SliderSlide(prop) {
-  return(
-    <SwiperSlide className='Slider'>
-    </SwiperSlide>
-  )
-}
+// function SliderSlide(prop) {
+//   return(
+//     <SwiperSlide className='Slider'>
+//     </SwiperSlide>
+//   )
+// }
 
 function Slider() {
   return (

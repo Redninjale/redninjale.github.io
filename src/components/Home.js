@@ -36,7 +36,7 @@ function Home() {
         <h2>Recent Projects</h2>
         <div className="HomeSkillsContainer">
           <HomeSkills src="./AN_bg.PNG" name={["JS", "React", "ML", "Python", "SQL", "Flask"]} ></HomeSkills>
-          <HomeSkills src="./RT_bg.PNG" name={["JS", "Svelte", "Firebase", "ChakraUI", ""]} ></HomeSkills>
+          <HomeSkills src="./RT_bg.PNG" name={["JS", "Svelte", "Firebase", "ChakraUI", "Figma"]} ></HomeSkills>
           <HomeSkills src="./AA_bg.PNG" name={["Python", "Pandas", "Sklearn"]}></HomeSkills>
         </div>
       </div>

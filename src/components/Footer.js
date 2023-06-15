@@ -32,7 +32,7 @@ function Footer() {
               </div>
             </form> */}
             <p>(281)-301-8588 | le.ph.cameron@gmail.com</p>
-            <p>Github: <a href="https://github.com/Redninjale" target="_blank">Redninjale</a> | Linkedin: <a href="https://www.linkedin.com/in/cameron-le-09430a24a/" target="_blank">Cameron Le</a></p>
+            <p>Github: <a href="https://github.com/Redninjale" rel="noopener" target="_blank">Redninjale</a> | Linkedin: <a href="https://www.linkedin.com/in/cameron-le-09430a24a/" target="_blank" rel="noopener">Cameron Le</a></p>
         </div>
     </div>
   )
