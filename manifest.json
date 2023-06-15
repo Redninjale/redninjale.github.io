@@ -3,23 +3,14 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "largerlogo.png",
-      "type": "image/png",
-      "sizes": "500x500"
-    }, {
-      "src": "smallerlogo.png",
-      "type": "image/png",
+      "src": "linkedin.svg",
+      "type": "image/svg",
       "sizes": "500x500"
     },
     {
-      "src": "linkedin.png",
-      "type": "image/png",
-      "sizes": "500x500"
-    },
-    {
-      "src": "github.png",
-      "type": "image/png",
-      "sizes": "500x500"
+      "src": "github.svg",
+      "type": "image/svg",
+      "sizes": "64x64"
     },
     {
       "src": "portrait.jpg",
@@ -32,19 +23,14 @@
       "sizes": "993x1343"
     },
     {
-      "src": "gmail.png",
-      "type": "image/png",
+      "src": "email.svg",
+      "type": "image/svg",
       "sizes": "500x500"
     },
     {
-      "src": "resume.png",
-      "type": "image/png",
+      "src": "resume.svg",
+      "type": "image/svg",
       "sizes": "500x500"
-    },
-    {
-      "src": "background.jpg",
-      "type": "image/jpg",
-      "sizes": "4032x3024"
     },
     {
       "src": "nasab9.jpg",
