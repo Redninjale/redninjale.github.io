@@ -1,16 +1,15 @@
 * {
     font-family: var(--rubik), "sans-serif";
-    color: rgb(0, 0, 0);
+    color: #fff;
 }
 
 .FooterContainer {
-    background-color: #ffffff;
+    background-color: var(--header-bg);
     display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: fit-content;
+    height: 35vh;
+    padding: 20px 50px;
 }
 
 div.FooterContainer h1 {
@@ -18,7 +17,8 @@ div.FooterContainer h1 {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 2.5rem;
-    color: black;
+    width: 100%;
+    text-align: left;
 }
 
 div.FooterContainer a {

@@ -6,168 +6,67 @@
   margin-top: 0px;
 }
 
-.ProjectsContainer {
-  position: relative;
-  background-color: var(--project-bg);
-}
-
-div.ProjectsAnchor {
-  position: absolute;
-  content: "";
-  visibility: visible;
-  top: -90px;
-}
-
-h1 {
-  font-family: var(--rubik), "sans-serif";
-  text-align:center;
-  font-size: 70px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/* Professional Experiences */
-.ProffesionalContainer {
-  background-color: #575b60;
-  height: fit-content;
-  width: 100%;
-}
-
-div.ProffesionalContainer h1 {
-  background-color: var(--projects-bg);
-}
-
-.swiper {
-  width: 100%;
-  height: 70vh;
-  color: #fff;
-
-}
-
-img.swiper-slide{
-  display: block;
-  position: absolute;
-  opacity: 0.3;
-  z-index: -1;
-  top: 0;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper-slide {
-  text-align: center;
-  background: linear-gradient(90deg,#393c41, #242628,black, #242628, #393c41);
-  color: #fff;
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-span.swiper-pagination-bullet {
-  background-color: white;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  left: 50%;
-  transform: rotate(90deg);
-  transform-origin: left center;
-  opacity: 75%;
-  color: #fff;
-}
-
-.swiper-button-next {
-  top: auto;
-  bottom: 10px;
-}
-
-.swiper-button-prev {
-  top: 10px;
-}
-
-.swiper-container {
-  width: 40%;
-  height: 90%;
-  color: #fff;
-  outline: #242628;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: auto;
-  align-items: center;
-}
-
-.swiper-title-container {
-  font-family: var(--rubik), 'sans-serif';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(8vw - 10px);
-}
-
-.swiper-icon{
-  max-height: 5rem;
-  max-width: 5rem;
-  opacity: 100%;
-}
-
-.swiper-title {
-  font-size: 7vw;
-  color: #fff;
-}
-
-.swiper-subtitle {
-  font-size: 1.75vw;
-  position: relative;
-  color: #fff;
-}
-
-.swiper-subtitle::after {
-  position: absolute;
-  top: calc(1.5vw + 12px);
-  left: 12.5%;
-  content: "";
-  border: 1px solid #fff;
-  /* border-radius: 30%; */
-  height: 1px;
-  width: 75%;
-}
-.swiper-context {
-  margin-top: 10px;
-  font-size: max(1.1vw, 15px);
-  color: #fff;
-}
-
 /* Personal Projects */
 .PersonalContainer {
   /* background: linear-gradient(var(--blue-bg), #a0a4b9, var(--blue-bg)); */
+  background-color: #ffffff;
   height: fit-content;
-  margin-top: 60px;
+  position: relative;
+  width: 100%;
+}
+
+#Projects {
+  position: absolute;
+  top: -75px;
+}
+
+div.Project-title h1 {
+  position: absolute;
+  color: #a6bea6;
+  top: 150px;
+  left: -130px;
+  height: fit-content;
+  width: fit-content;
+  transform: rotate(-90deg);
+  margin-top: 0;
+  opacity: 1;
+}
+
+div.Project-title h1.is-sticky {
+  position: fixed;
+  top: 220px;
+  left: -130px;
+  opacity: 1;
+  animation: 600ms ease-in-out 0s normal none 1 running;
+  z-index: 10;
+}
+div.Project-title div {
+  content: "";
+  position: absolute;
+  height: 950px;
+  top: 30px;
+  left: 90px;
+  /* transform: rotate(90deg); */
+  border: 2px solid #a6bea6;
+  border-radius: 10px;
 }
 
 ul.CardList {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 ul.CardList li {
   position:relative;
   list-style-type: none;
   width: 6px;
-  background-color: white;
-  margin: 0 auto;
+  background-color: #a6bea6;
+  margin: 0 calc(50%);
   padding-top: 50px;
 }
 
 ul.CardList li::after {
-  background: white;
-  border: 5px white;
+  background: #a6bea6;
+  border: 5px solid #a6bea6;
   content: '';
   width: 25px;
   height: 25px;
@@ -179,33 +78,33 @@ ul.CardList li::after {
 }
 
 ul.CardList li.hover::after {
-  background: orange;
-  border: 4px solid white;
+  background: rgb(217, 255, 0);
+  border: 4px solid #a6bea6;
   transform: translateX(-50%);
-  transition: 0.3s ease-in-out
-  border 0.3s ease-in-out;
+  transition: 0.250s ease-in-out
+  border 0.5s ease-in-out;
 }
 
 ul.CardList li div{
   position: relative;
-  width: 500px;
+  width: 450px;
   padding: 15px;
   border-radius: 5px;
   bottom: 0;
-  background: rgb(255, 255, 255);
-}
-
-ul.CardList li:nth-child(odd) div {
-  left: 45px;
+  background: #a6bea6;
 }
 
 ul.CardList li:nth-child(even) div {
+  left: 45px;
+}
+
+ul.CardList li:nth-child(odd) div {
   left: -545px;
 }
 
 time {
   font-weight: 400;
-  color: black;
+  color: #fff;
   text-transform: uppercase;
   font-family: var(--rubik);
   font-size: 20px;
@@ -214,7 +113,7 @@ time {
 }
 
 li.CardItem p {
-  color: black;
+  color: #ffffff;
   font-weight: 300;
   font-family: var(--rubik);
   font-size: 17.5px;

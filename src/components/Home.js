@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css"
+import { email } from './Header'
 
 function Home() {
   return (
@@ -28,7 +29,7 @@ function Home() {
             <li className='NavLItem'><a href="https://drive.google.com/file/d/1UjRLHpH7fCXiAwW9umaZJpG4hgLzOsOT/view?usp=sharing" target="_blank" rel="noreferrer" ><img className='NavIcon' src= "./resume_black.svg" type="image/svg" alt="Logo" /></a></li>
             <li className='NavLItem'><a href="https://github.com/Redninjale" target="_blank" rel="noreferrer"><img className='NavIcon' src= "./github_black.svg" type="image/svg" alt="Logo" /></a></li>
             <li className='NavLItem'><a href="https://www.linkedin.com/in/cameron-le-09430a24a/" target="_blank" rel="noreferrer"><img className='NavIcon' src= "./linkedin_black.svg" type="image/svg" alt="Logo" /></a></li>
-            <li className='NavLItem'><a href="https://www.linkedin.com/in/cameron-le-09430a24a/"><img className='NavIcon' src= "./email_black.svg" type="image/svg" alt="Logo" /></a></li>
+            <li className='NavLItem' value="white"><img className='NavIcon email' onClick={() => email('white')} src= "./email_black.svg" type="image/svg" alt="Logo" /></li>
           </ul>
         </div>
       </div>

@@ -7,8 +7,8 @@
 .HomeContainer {
     height: fit-content;
     width: 100vw;
-    padding-top: 76px;
-    background-color: white;
+    padding-top: 50px;
+    background-color: #ffffff;
     color: black;
 }
 
@@ -24,6 +24,7 @@ a {
 
 div.HomeNameContainer {
     margin-top: 30px;
+    padding-top: 35px;
     padding-left: 83px; 
     display: flex;
     flex-direction: column;
@@ -46,12 +47,14 @@ h1.HomeWelcome, h1.HomeName, h1.HomeName span {
 h1.HomeWelcome {
     font-size: 2vw;
     line-height: 1.7vw;
+    padding: 0;
     /* 40 */
 }
 
 h1.HomeName {
     font-size: 4.5vw;
     line-height: 3.8vw;
+    padding: 0;
 }
 
 h1.HomeName span {
@@ -66,7 +69,7 @@ div.HomeNameContainer div {
 
 img.HomeImage {
     margin-top: 3.5%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1;
     height: 23vw;
     /* 350 */
     width: 23vw;
@@ -139,6 +142,36 @@ ul.HomeIconList{
     transform: scale(1);
 }
 
+.HomeIconList li.NavLItem:nth-child(4) {
+    position: relative;
+}
+
+.email:hover {
+    cursor: pointer;
+}
+
+.HomeIconList li.NavLItem:nth-child(4)::after {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    content: "copied email";
+    height: fit-content;
+    width: 65px;
+    font-family: var(--rubik);
+    font-size: 10px;
+    background-color: #767976;
+    opacity: 0.0;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    transition: ease-in-out 250ms;
+}
+
+.HomeIconList li.NavLItem:nth-child(4).clicked::after {
+    opacity: 0.9;
+}
+
 /* Recent Projects */
 div.HomeProjects {
     margin-top: 10px;
@@ -154,10 +187,11 @@ div.HomeProjects h2 {
 div.HomeSkillsContainer {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     height: 35vh;
     width: 100%;
-    padding-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 div.HomeSkillsContainer div.HomeSkills {
@@ -189,9 +223,6 @@ div.HomeSkills-stack {
     grid-template-columns: repeat(3, 1fr);
     grid-column: 10px;
     width: 100%;
-    /* flex-direction: row; */
-    /* justify-content: space-evenly; */
-    /* flex-shrink: 1; */
 }
 
 div.HomeSkillsContainer div div.HomeStackElement {

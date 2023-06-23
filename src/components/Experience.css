@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 0px;
+}
+
+div.ExperienceAnchor {
+    position: absolute;
+    content: "";
+    visibility: visible;
+    top: -75px;
+}
+
+h1 {
+    font-family: var(--rubik), "sans-serif";
+    text-align: center;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/* Professional Experiences */
+.ExperienceContainer {
+    position: relative;
+    background-color: var(--project-bg);
+    height: 95vh;
+    width: 100%;
+}
+
+div.ExperienceContainer h1 {
+    background-color: var(--projects-bg);
+}
+
+.swiper {
+    width: 80%;
+    height: 70vh;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+img.swiper-slide {
+    display: block;
+    position: absolute;
+    opacity: 0.3;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: linear-gradient(90deg, #393c41, #151617, black, #060707, #393c41);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.swiper-pagination-bullet {
+    background-color: white;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    right: 50%;
+    transform-origin: left center;
+    opacity: 75%;
+    color: #fff;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-container {
+    width: 90%;
+    height: 90%;
+    color: #fff;
+    outline: #242628;
+    display: flex;
+    flex-direction: row;
+    justify-content: auto;
+    align-items: center;
+}
+
+.swiper-title-container {
+    width: 35%;
+    font-family: var(--rubik), 'sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-icon {
+    max-height: 5em;
+    max-width: 5em;
+    opacity: 100%;
+}
+
+.swiper-title {
+    font-size: clamp(40px, 4vw, 60px);
+    height: 75%;
+    /* font-size: 4vw; */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+div.swiper-content {
+    width: 55%;
+    height: 100%;
+    padding-top: 70px;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}
+
+.swiper-subtitle {
+    font-size: clamp(20px, 1.7vw, 45px);
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+}
+
+div.swiper-divider {
+    margin-left: 25px;
+    margin-right: 35px;
+    content: "";
+    border: 2px solid #fff;
+    height: 70%;
+    width: 2px;
+}
+
+.swiper-context {
+    padding-top: 35px;
+    /* font-size: max(1.1vw, 15px); */
+    font-size: 18px;
+    color: #fff;
+}
