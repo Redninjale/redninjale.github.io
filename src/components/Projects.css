@@ -40,6 +40,12 @@ div.Project-title h1.is-sticky {
   animation: 600ms ease-in-out 0s normal none 1 running;
   z-index: 10;
 }
+
+div.Project-title h1.bottom {
+  top: 780px;
+  left:-130px;
+}
+
 div.Project-title div {
   content: "";
   position: absolute;

@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './Projects.css';
 
 function Projects() {
-    const [headerWidth, setHeaderWidth] = useState(undefined);
-    const [headerTop, setHeaderTop] = useState(undefined);
     const [headerBot, setHeaderBot] = useState(undefined);
+    const [headerTop, setHeaderTop] = useState(undefined);
 
 
     useEffect(() => {
@@ -47,24 +46,31 @@ function Projects() {
 
     useEffect(() => {
         const headerEl = document.querySelector(".PersonalContainer div.Project-title h1").getBoundingClientRect();
-        setHeaderWidth(headerEl.width);
+        setHeaderBot(headerEl.bottom);
         setHeaderTop(headerEl.top);
 
         function headerSticky() {
             var header = document.querySelector(".PersonalContainer div.Project-title h1");
-            // console.log(isItemInView(header));
-            if (header && window.scrollY >= headerTop - 70) {
-                console.log(window.scrollY);
+            console.log(headerBot);
+            if (header && window.scrollY >= headerTop - 60 && window.scrollY <= headerBot + 220) {
+                // console.log(window.scrollY);
                 header.classList.add("is-sticky");
             } else {
-                header.classList.remove("is-sticky");
+                if(header.classList.contains("is-sticky")) {
+                    header.classList.remove("is-sticky");
+                }
+                if(header && window.scrollY >= headerBot + 222) {
+                    header.classList.add("bottom");
+                } else if(header.classList.contains("bottom")) {
+                    header.classList.remove("bottom");
+                }
             }
         }
 
         // window.addEventListener("load", headerSticky);
         window.addEventListener("resize", headerSticky);
         window.addEventListener("scroll", headerSticky);
-    }, [headerTop]);
+    }, [headerTop, headerBot]);
 
     return (
         <div className='ProjectsContainer'>

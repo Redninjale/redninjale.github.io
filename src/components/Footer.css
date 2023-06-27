@@ -1,25 +1,118 @@
 * {
     font-family: var(--rubik), "sans-serif";
-    color: #fff;
+    color: black;
+    box-sizing: border-box;
 }
 
 .FooterContainer {
-    background-color: var(--header-bg);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 35vh;
-    padding: 20px 50px;
+    height: fit-content;
+    padding: 20px 0 40px 0;
+    position: relative;
+}
+
+.FooterContainer::before {
+    position: absolute;
+    top: 55%;
+    background-color: #a6bea6;
+    content: "";
+    height: 45%;
+    width: 100%;
 }
 
 div.FooterContainer h1 {
     font-family: var(--rubik);
     text-transform: uppercase;
+    color: black;
     letter-spacing: 5px;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    line-height: 30px;
     width: 100%;
-    text-align: left;
 }
+
+div.FooterContainer span {
+    font-size: 1rem;
+}
+div.FooterContainer span b {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.FooterContent {
+    display: flex;
+}
+
+.FooterContent {
+    width: 60%;
+    overflow-wrap: break-word;
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: #ffeed0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+input, textarea {
+    color: black;
+}
+
+form {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    width: 85%;
+    display: grid;
+    row-gap: 6px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto 30px auto 90px 40px;
+}
+
+form div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    grid-template-rows: auto 30px;
+}
+
+label {
+    font-family: var(--rubik);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+input, textarea {
+    background: transparent;
+    background-color: #fff;
+    border: 1px #a3a3a3 solid;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+textarea {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button {
+    background-color: #a6bea6;
+    font-size: 1.5rem;
+    opacity: 0.75;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px #a3a3a3 solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 1;
+}
+
 
 div.FooterContainer a {
     text-decoration: underline;
