@@ -60,7 +60,7 @@ function Home() {
       delay: function(el, i) {
         return i * 100;
       }
-    });
+    }, 1500);
     tl.add({
       targets: "h1.HomeIntro span",
       translateY: [30, 0],
@@ -94,7 +94,7 @@ function Home() {
       delay: function(el, i) {
         return i * 300;
       }
-    }, 4000);
+    }, 6000);
   }, [])
   return (
     <div id='Home' className='HomeContainer'>
