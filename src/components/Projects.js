@@ -5,6 +5,19 @@ function Projects() {
     const [headerBot, setHeaderBot] = useState(undefined);
     const [headerTop, setHeaderTop] = useState(undefined);
 
+    function showMore() {
+        var container = document.querySelector("div.PersonalContainer div.Project-title h1");
+            
+        if(!container.classList.contains("show")) {
+            document.querySelector("div.More").classList.add("show");
+            document.querySelector(".PersonalContainer").classList.add("show");
+            document.querySelector("div.Project-title h1").classList.add("show");
+        } else {
+            document.querySelector("div.More").classList.remove("show");
+            document.querySelector(".PersonalContainer").classList.remove("show");
+            document.querySelector("div.Project-title h1").classList.remove("show");
+        }
+    }
 
     useEffect(() => {
         var items = document.querySelectorAll("li.CardItem");
@@ -12,9 +25,9 @@ function Projects() {
         function isItemInView(item) {
             var rect = item.getBoundingClientRect();
             return (
-                rect.top >= 0 &&
+                rect.top >= -300 &&
                 rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight + 200 || document.documentElement.clientHeight) &&
+                rect.bottom <= (window.innerHeight + 300 || document.documentElement.clientHeight) &&
                 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
             );
         }
@@ -41,21 +54,6 @@ function Projects() {
                 item.querySelector("div").addEventListener("mouseleave", () => { item.classList.remove("hover") });
             }
         });
-
-        function showMore() {
-            var container = document.querySelector("div.PersonalContainer div.Project-title h1");
-                
-            if(!container.classList.contains("show")) {
-                document.querySelector("div.More").classList.add("show");
-                document.querySelector(".PersonalContainer").classList.add("show");
-                document.querySelector("div.Project-title h1").classList.add("show");
-            } else {
-                document.querySelector("div.More").classList.remove("show");
-                document.querySelector(".PersonalContainer").classList.remove("show");
-                document.querySelector("div.Project-title h1").classList.remove("show");
-            }
-        }
-        document.querySelector("div.More img").addEventListener("click", showMore);
     });
 
     useEffect(() => {
@@ -70,7 +68,7 @@ function Projects() {
             // console.log("BOT:" + headerBot);
             if (header && headerTop !== undefined && headerBot!== undefined && window.scrollY >= headerTop - 60 && 
                 ((window.scrollY <= headerBot - 450 && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
-                (window.scrollY <= headerBot + 350 && document.querySelector("div.PersonalContainer").classList.contains("show")))) {
+                (window.scrollY <= headerBot + 320 && document.querySelector("div.PersonalContainer").classList.contains("show")))) {
                 if(!header.classList.contains("is-sticky")) {
                     header.classList.add("is-sticky");
                 }
@@ -85,9 +83,6 @@ function Projects() {
                 }
             }
         }
-
-        // window.addEventListener("load", headerSticky);
-        // window.addEventListener("resize", headerSticky);
         window.addEventListener("scroll", headerSticky);
     }, [headerTop, headerBot]);
 
@@ -138,7 +133,7 @@ function Projects() {
                         framework={["Robotics", "Fusion360", "Network", "Bluetooth"]}/>
                 </ul>
             </div>
-            <div className="More"><img src="down-arrow.svg"></img></div>
+            <div className="More"><img src="down-arrow.svg" onClick={() => {showMore();}} alt="Bad down"></img></div>
         </div>
     )
 }
@@ -148,7 +143,7 @@ function Card(prop) {
         <li className='CardItem'>
             <div>
                 <time>{prop.time}</time>
-                <img src={prop.photo} className={prop.photo ? "ShowImg" : "HideImg"} alt="Not Projectsing" type="jpg" />
+                <img src={prop.photo} className={prop.photo ? "ShowImg" : "HideImg"} alt="Not Projecting" type="jpg" />
                 <p>{prop.description ? prop.description : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. "}
                 </p>
                 <span className="CardFrame">

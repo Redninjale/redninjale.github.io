@@ -43,11 +43,11 @@ function Slider() {
             <div className="swiper-divider"></div>
             <div className="swiper-content">
               <span className='swiper-subtitle'>Software Engineer Intern</span>
-              <div className='swiper-context'>This was a NASA program by the ER4 Robotics division at JSC known for building Valkyrie and rovers 
-              to develop robotics talents with rotational projects. The projects I developed utilized Python, Pandas, PythonQt, Altium, and Git. 
-              I focused on the QtWidget project that optimizes the bill of material verification process. Using EEE-INST-002 derating standards,
+              <div className='swiper-context'>NASA program by the <b>ER4 Robotics division</b> at JSC known for building Valkyrie and rovers 
+              to develop robotics talents with <b>rotational projects</b>. The projects I developed utilized <b>Python, Pandas, PythonQt, Altium, and Git</b>. 
+              I focused on the <b>QtWidget</b> project that <b>optimizes the bill of material verification process</b>. Using EEE-INST-002 derating standards,
               we created an interactive app for NASA engineers to upload their bill of materials and analyze any extensive or inappropriate use of 
-              electrical components. We recieved large support after pitching this project to 50 NASA engineers for 
+              electrical components. We recieved <b>large support</b> after pitching this project to <b>50 NASA engineers</b> for 
               advise and fine-tuning the interactive elements.
             </div>
             </div>
@@ -63,9 +63,9 @@ function Slider() {
             <div className="swiper-divider"></div>
             <div className="swiper-content">
               <span className='swiper-subtitle'>Lead Software Engineer</span>
-              <div className='swiper-context'>Pearadox is a robotics organization in the First Robotics Competition. I was the lead software engineer 
-              for 3 years using Java, OpenCV, and WPILib API(FRC related API). During my time on the team, we won finalist at 4 district events and 1 World 
-              Championship Subdivision. As well, we won 2 autonomous awards and 2 engineering inspiration awards.
+              <div className='swiper-context'>Pearadox is a robotics organization in the First Robotics Competition. I was the <b>lead software engineer</b> 
+              for 3 years using <b>Java, OpenCV, and WPILib API</b>(FRC related API). During my time on the team, we won finalist at <b>4 district events</b> and <b>2 World 
+              Championship Subdivision</b>. As well, we won a <b>autonomous robot</b> and 2 engineering inspiration awards.
               </div>
             </div>
           </div>

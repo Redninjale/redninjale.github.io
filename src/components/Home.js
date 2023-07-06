@@ -50,22 +50,20 @@ function Home() {
     var tl = anime.timeline({
       loop:false,
       easing: 'easeOutQuad',
-      duration: 750
+      duration: 700
     });
     tl.add({
       targets: "h1.HomeWelcome span",
       translateY: [30, 0],
       opacity: [0, 1],
-      duration: 600,
       delay: function(el, i) {
         return i * 100;
       }
-    }, 1500);
+    }, 900);
     tl.add({
       targets: "h1.HomeIntro span",
       translateY: [30, 0],
       opacity: [0, 1],
-      duration: 600,
       delay: function(el, i) {
         return i * 100;
       },
@@ -79,22 +77,21 @@ function Home() {
       }
     });
     tl.add({
+      targets: ["img.HomeImage", "div.HomeContent", "div.HomeProjects"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      delay: function(el, i) {
+        return i * 900;
+      }
+    });
+    tl.add({
       targets: "h1.HomeIntro span",
       translateY: [0,30],
       opacity: [1,0],
       delay: function(el, i) {
         return i * 100;
       }
-    }, 7000);
-
-    tl.add({
-      targets: ["img.HomeImage", "div.HomeContent", "div.HomeProjects"],
-      opacity: [0, 1],
-      translateY: [50, 0],
-      delay: function(el, i) {
-        return i * 300;
-      }
-    }, 6000);
+    }, 9000);
   }, [])
   return (
     <div id='Home' className='HomeContainer'>

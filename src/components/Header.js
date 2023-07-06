@@ -6,6 +6,8 @@ function Header() {
         <div className='NavBar'>
             <div className='NavList'>
                 {/* <Link to="/"><img className='NavLogo' src= "./largerlogo.png" type="image/png" alt="Logo" /></Link> */}
+                {/* <span><a className='NavLink' id="hContact" href='#Contact'>Contact</a></span> */}
+                
                 <ul className='NavList'>
                     <li className='NavLItem'><a className='NavLink' href='#Home'>Home</a></li>
                     <li className='NavLItem'><a className='NavLink' href='#Experience'>Experience</a></li>

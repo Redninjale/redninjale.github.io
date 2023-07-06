@@ -151,3 +151,10 @@ div.swiper-divider {
     font-size: 18px;
     color: #fff;
 }
+
+.swiper-content b {
+    font-family: var(--rubik);
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
