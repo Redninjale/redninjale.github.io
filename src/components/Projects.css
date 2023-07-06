@@ -7,12 +7,41 @@
 }
 
 /* Personal Projects */
-.PersonalContainer {
+div.PersonalContainer {
   /* background: linear-gradient(var(--blue-bg), #a0a4b9, var(--blue-bg)); */
   background-color: #ffffff;
-  height: fit-content;
+  height: 1240px;
   position: relative;
+  overflow: hidden;
   width: 100%;
+}
+
+div.PersonalContainer.show {
+  height: fit-content;
+}
+
+div.More {
+  background: linear-gradient(#fff,#fff, #fff, rgb(204, 204, 204));
+  width: 100%;
+  text-align: center;
+  font-family: var(--rubik);
+  text-transform: uppercase;
+}
+
+div.More.show {
+  transform: rotate(180deg);
+  background: #fff;
+}
+
+div.More img {
+  width: 50px;
+  height: 40px;
+  color: #a6bea6;
+  opacity: 0.7;
+}
+
+div.More img:hover {
+  cursor: pointer;
 }
 
 #Projects {
@@ -37,19 +66,24 @@ div.Project-title h1.is-sticky {
   top: 220px;
   left: -130px;
   opacity: 1;
-  animation: 600ms ease-in-out 0s normal none 1 running;
+  animation: all 600ms ease-in-out 0s normal none 1 running;
   z-index: 10;
 }
 
+div.Project-title h1.bottom.show {
+  top: 1720px;
+}
+
 div.Project-title h1.bottom {
-  top: 780px;
+  top: 1000px;
   left:-130px;
 }
 
 div.Project-title div {
   content: "";
   position: absolute;
-  height: 950px;
+  overflow: hidden;
+  height: 100%;
   top: 30px;
   left: 90px;
   /* transform: rotate(90deg); */
@@ -93,7 +127,11 @@ ul.CardList li.hover::after {
 
 ul.CardList li div{
   position: relative;
-  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500px;
+  height: fit-content;
   padding: 15px;
   border-radius: 5px;
   bottom: 0;
@@ -133,16 +171,37 @@ img.HideImg {
 
 img.ShowImg {
   visibility: visible;
-  height: 10%;
-  width: 100%;
+  height: 50%;
+  width: 70%;
   object-fit: cover;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 ul.CardList li div {
   visibility: hidden;
   opacity: 0;
   transition: all .6s ease-in-out;
+}
+
+li.CardItem div span.CardFrame {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+span.CardFrame span.CardFrameItem {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.5px 5px 2.5px 5px;
+  width: fit-content;
+  text-transform: uppercase;
 }
 
 ul.CardList li:nth-child(odd) div {

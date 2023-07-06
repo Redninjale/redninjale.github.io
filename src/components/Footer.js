@@ -22,30 +22,30 @@ function ContactForm() {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                
-            <label for="firstName">
-                First Name *
-            </label>
 
-            <label for="lastName">
-                Last Name *
-            </label>
+                <label htmlFor="firstName">
+                    First Name *
+                </label>
 
-            <input required id="firstName" type="text" name="firstName"/>
+                <label htmlFor="lastName">
+                    Last Name *
+                </label>
 
-            <ValidationError
-                prefix="First Name"
-                field="firstName"
-                errors={state.errors}
-            />
+                <input required id="firstName" type="text" name="firstName" />
 
-            <input required id="lastName" type="text" name="lastName"/>
+                <ValidationError
+                    prefix="First Name"
+                    field="firstName"
+                    errors={state.errors}
+                />
 
-            <ValidationError
-                prefix="Last Name"
-                field="lastName"
-                errors={state.errors}
-            />
+                <input required id="lastName" type="text" name="lastName" />
+
+                <ValidationError
+                    prefix="Last Name"
+                    field="lastName"
+                    errors={state.errors}
+                />
             </div>
 
             <label htmlFor="email">
@@ -64,7 +64,7 @@ function ContactForm() {
                 errors={state.errors}
             />
 
-            <label for="message">
+            <label htmlFor="message">
                 Send me a message!
             </label>
             <textarea

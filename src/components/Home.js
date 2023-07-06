@@ -1,14 +1,110 @@
-import React from 'react'
-import "./Home.css"
-import { email } from './Header'
+import React, { useEffect } from 'react';
+import anime from 'animejs/lib/anime.es.js';
+import "./Home.css";
+import { email } from './Header';
 
 function Home() {
+  useEffect(() => {
+    var chao = document.querySelector(".HomeWelcome");
+    var intro = document.querySelector(".HomeIntro");
+    var name = document.querySelector("h1.HomeName");
+    // var comp = false;
+
+    if(chao && intro && name) {
+      console.log(intro.innerHTML);
+      chao.innerHTML = chao.innerHTML.replace("<span class='spacing'></span>", " ");
+      intro.innerHTML = intro.innerHTML.replace("<span class='spacing'></span>", " ");
+      name.innerHTML = name.innerHTML.replace("<span class='spacing'></span>", " ");
+
+      var chaoText = [...chao.textContent];
+      chao.innerHTML = "";
+      chaoText.forEach(c => {
+        if(c !== " ") {
+          chao.innerHTML += "<span>" + c + "</span>";
+        } else {
+          chao.innerHTML += "<span class='spacing'></span>";
+        }
+      });
+
+      var introText = [...intro.textContent];
+      intro.innerHTML = "";
+      introText.forEach(c => {
+        if(c !== " ") {
+          intro.innerHTML += "<span>" + c + "</span>";
+        } else {
+          intro.innerHTML += "<span class='spacing'></span>";
+        }
+      });
+
+      var nameText = [...name.textContent];
+      name.innerHTML = "";
+      nameText.forEach(c => {
+        if(c !== " ") {
+          name.innerHTML += "<span>" + c + "</span>";
+        } else {
+          name.innerHTML += "<span classname='spacing'></span>";
+        }
+      });
+    }
+
+    var tl = anime.timeline({
+      loop:false,
+      easing: 'easeOutQuad',
+      duration: 750
+    });
+    tl.add({
+      targets: "h1.HomeWelcome span",
+      translateY: [30, 0],
+      opacity: [0, 1],
+      duration: 600,
+      delay: function(el, i) {
+        return i * 100;
+      }
+    });
+    tl.add({
+      targets: "h1.HomeIntro span",
+      translateY: [30, 0],
+      opacity: [0, 1],
+      duration: 600,
+      delay: function(el, i) {
+        return i * 100;
+      },
+    });
+    tl.add({
+      targets: "h1.HomeName span",
+      translateY: [30,0],
+      opacity: [0,1],
+      delay: function(el, i) {
+        return i * 200;
+      }
+    });
+    tl.add({
+      targets: "h1.HomeIntro span",
+      translateY: [0,30],
+      opacity: [1,0],
+      delay: function(el, i) {
+        return i * 100;
+      }
+    }, 7000);
+
+    tl.add({
+      targets: ["img.HomeImage", "div.HomeContent", "div.HomeProjects"],
+      opacity: [0, 1],
+      translateY: [50, 0],
+      delay: function(el, i) {
+        return i * 300;
+      }
+    }, 4000);
+  }, [])
   return (
     <div id='Home' className='HomeContainer'>
       <div className='HomeBody'>
         <div className='HomeNameContainer'>
-          <h1 className='HomeWelcome'>Chao</h1>
-          <h1 className='HomeName'>Cameron<span>Le</span></h1>
+          <div className="HomeWContainer">
+            <h1 className='HomeWelcome'>Chào</h1>
+            <h1 className="HomeIntro"> I am</h1>
+          </div>
+          <h1 className='HomeName'>Cameron Le</h1>
           <div>
             <img className='HomeImage' src="./portrait_3.jpg" alt="Not Working" />
           </div>
@@ -61,6 +157,7 @@ const HomeSkills = (props) => {
     </div>
   )
 }
+
 const HomeStackElement = (props) => {
   return (
     <div className="HomeStackElement">

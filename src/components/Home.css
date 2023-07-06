@@ -1,15 +1,12 @@
-
 * {
     box-sizing: border-box;
     margin: 0px;
 }
 
 .HomeContainer {
-    height: fit-content;
     width: 100vw;
     padding-top: 50px;
     background-color: #ffffff;
-    color: black;
 }
 
 a {
@@ -25,17 +22,15 @@ a {
 div.HomeNameContainer {
     margin-top: 30px;
     padding-top: 35px;
-    padding-left: 83px; 
+    padding-left: 83px;
     display: flex;
     flex-direction: column;
-    width: fit-content;
     font-family: 'Rubik Mono One', sans-serif;
-    font-weight: 100px;
-    height: fit-content;
     color: black;
 }
 
-h1.HomeWelcome, h1.HomeName, h1.HomeName span {
+h1.HomeName,
+h1.HomeName span {
     font-weight: 400;
     font-family: var(--rubik-mono);
     letter-spacing: -0.14px;
@@ -44,11 +39,42 @@ h1.HomeWelcome, h1.HomeName, h1.HomeName span {
     text-align: left;
 }
 
+div.HomeNameContainer div.HomeWContainer {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+span.spacing {
+    padding: 0 7.5px 0 7.5px;
+}
+
+h1.HomeIntro {
+    padding: 0 0 0 15px;
+    line-height: 1.5vw;
+}
+
+h1.HomeIntro span {
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+    font-family: var(--rubik-mono);
+    font-size: 2.75vw;
+}
+
 h1.HomeWelcome {
-    font-size: 2vw;
-    line-height: 1.7vw;
+    color: black;
+    line-height: 1.5vw;
     padding: 0;
-    /* 40 */
+}
+
+h1.HomeWelcome span {
+    display: inline-block;
+    font-family: var(--rubik-mono);
+    font-weight: 400;
+    font-size: 2.75vw;
+    padding: 0;
 }
 
 h1.HomeName {
@@ -58,7 +84,7 @@ h1.HomeName {
 }
 
 h1.HomeName span {
-    padding-left: 15px;
+    display: inline-block;
 }
 
 div.HomeNameContainer div {
@@ -87,8 +113,10 @@ div.HomeContent {
     height: fit-content;
 }
 
-h2, h3, p {
-    color:black;
+h2,
+h3,
+p {
+    color: black;
     font-family: var(--rubik);
 }
 
@@ -131,7 +159,7 @@ img.NavIcon {
     max-width: 25px;
 }
 
-ul.HomeIconList{
+ul.HomeIconList {
     display: flex;
     height: 100%;
     list-style: none;
