@@ -43,7 +43,7 @@ function Slider() {
             <div className="swiper-divider"></div>
             <div className="swiper-content">
               <span className='swiper-subtitle'>Software Engineer Intern</span>
-              <div className='swiper-context'>NASA program by the <b>ER4 Robotics division</b> at JSC known for building Valkyrie and rovers 
+              <div className='swiper-context'>Worked at the <b>ER4 Robotics NASA division</b> at JSC(Valkyrie and rovers) 
               to develop robotics talents with <b>rotational projects</b>. The projects I developed utilized <b>Python, Pandas, PythonQt, Altium, and Git</b>. 
               I focused on the <b>QtWidget</b> project that <b>optimizes the bill of material verification process</b>. Using EEE-INST-002 derating standards,
               we created an interactive app for NASA engineers to upload their bill of materials and analyze any extensive or inappropriate use of 

@@ -111,9 +111,9 @@ function Home() {
           <h2>Software engineer</h2>
           <h3>UI/UX, Backend, Data analytics</h3>
           <p>Howdy! I'm a <b>Computer Science student at Texas A&M University</b>. I plan on pursuing a Bachelors in Science. 
-          I love to create and design using code. I am also an avid in-door rock climber and traveler.</p>
-          <p>The industries that I have worked for include <b>Software Engineering</b> and Embedded Systems. I spent last summer working for <b>NASA</b> Johnson Space Center for software engineering. I actively participated
-           in <b>robotics</b> for 4 years. At A&M, I am in <b>Aggie Coding Club</b> and <b>Aggie Data Science club</b> to collaborate
+          I love to create and design using code. I am also an avid indoor rock climber and traveler.</p>
+          <p>The industries that I have worked for include <b>Software Engineering</b> and Embedded Systems. I spent 2022 summer working for <b>NASA</b> Johnson Space Center for software engineering. I actively participated
+           in <b>robotics</b> from 2018-2022. At A&M, I am in <b>Aggie Coding Club</b> and <b>Aggie Data Science club</b> to collaborate
              and push for an environment that excels.</p>
           <p id="last">My <b>future direction</b> is currently in developing myself as a <b>full-stack</b> developer learning <b>figma</b> designing, <b>databases</b>, <b>caching</b>
           , <b>ORM/ODM</b>, and <b>cloud</b>.</p>

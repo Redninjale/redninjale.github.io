@@ -5,8 +5,9 @@ import { useForm, ValidationError } from '@formspree/react';
 function Footer() {
     return (
         <div className='FooterContainer' id="Footer">
+            <div id="Contact"></div>
             <h1>Contact Me!</h1>
-            <span>I am looking for <b>internship opportunities for software engineering</b> so feel free to reach out to me</span>
+            <span><b>internship opportunities for software engineering</b> so feel free to reach out to me</span>
             <div className="FooterContent">
                 <ContactForm />
             </div>

@@ -2,6 +2,7 @@
     font-family: var(--rubik), "sans-serif";
     color: black;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .FooterContainer {
@@ -13,6 +14,10 @@
     height: fit-content;
     padding: 20px 0 40px 0;
     position: relative;
+}
+
+#Contact {
+    position: absolute;
 }
 
 .FooterContainer::before {

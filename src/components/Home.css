@@ -3,7 +3,7 @@
     margin: 0px;
 }
 
-.HomeContainer {
+div.HomeContainer {
     width: 100vw;
     padding-top: 50px;
     background-color: #ffffff;
@@ -13,16 +13,17 @@ a {
     scroll-behavior: smooth;
 }
 
-.HomeBody {
+div.HomeBody {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 div.HomeNameContainer {
-    margin-top: 30px;
+    width: 40%;
+    margin-top: 2.5%;
     padding-top: 35px;
-    padding-left: 83px;
+    padding-left: 7.5%;
     display: flex;
     flex-direction: column;
     font-family: 'Rubik Mono One', sans-serif;
@@ -60,7 +61,7 @@ h1.HomeIntro span {
     color: black;
     font-weight: 400;
     font-family: var(--rubik-mono);
-    font-size: 2.75vw;
+    font-size: 2.5vw;
 }
 
 h1.HomeWelcome {
@@ -73,12 +74,12 @@ h1.HomeWelcome span {
     display: inline-block;
     font-family: var(--rubik-mono);
     font-weight: 400;
-    font-size: 2.75vw;
+    font-size: 2.5vw;
     padding: 0;
 }
 
 h1.HomeName {
-    font-size: 4.5vw;
+    font-size: 4vw;
     line-height: 3.8vw;
     padding: 0;
 }
@@ -96,20 +97,19 @@ div.HomeNameContainer div {
 img.HomeImage {
     margin-top: 3.5%;
     aspect-ratio: 1;
-    height: 23vw;
-    /* 350 */
-    width: 23vw;
+    height: 25vw;
+    width: 25vw;
     border-radius: 10px;
     box-shadow: -5px 5px 20px 0.5px #a6bea6, 0px 0px 10px 0px #adc7ad;
     border: 1px solid white;
 }
 
 div.HomeContent {
-    width: 45%;
+    width: 50%;
     color: black;
-    padding-left: 70px;
-    margin-top: 30px;
-    padding-top: calc(45px + 100vw * 0.01);
+    padding-left: 7.5%;
+    margin-top: 2.5%;
+    padding-top: calc(55px + 100vw * 0.0125);
     height: fit-content;
 }
 
@@ -216,53 +216,50 @@ div.HomeSkillsContainer {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: 35vh;
+    justify-content: center;
+    gap: 10%;
     width: 100%;
-    margin-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 div.HomeSkillsContainer div.HomeSkills {
-    width: 20vw;
-    height: 20vw;
+    width: 20%;
+    min-width: 100px;
+    aspect-ratio: 2/1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
 div.HomeSkills-bg {
     border: 1px white solid;
-    width: 100%;
-    height: 50%;
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0px 0px 5px 1px #a6bea6, 0px 0px 5px 1px #adc7ad;
 }
 
 div.HomeSkills-bg img {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 div.HomeSkills-stack {
     display: grid;
-    /* flex-wrap: wrap; */
     grid-template-columns: repeat(3, 1fr);
     grid-column: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
     width: 100%;
 }
 
 div.HomeSkillsContainer div div.HomeStackElement {
-    width: 5.5em;
     text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
     background-color: #a6bea6;
     font-family: var(--rubik);
-    line-height: 25px;
-    max-height: 25px;
+    /* line-height: 25px; */
+    font-size: clamp(10px, 1.5vw, 17px);
+    padding: 2.5px 2px 2.5px 2px;
     text-transform: uppercase;
     color: white;
     border-radius: 20px;

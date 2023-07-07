@@ -1,29 +1,33 @@
+* {
+    transition: all 250ms;
+}
+
 div.NavBar {
     position: fixed;
     z-index: 10;
     width: 100%;
-    height: 75px;
+    height: 64px;
     background-color: var(--header-bg);
     display: flex;
     justify-content: center;
     text-align: center;
-    top:0;
 }
 
 div.NavList {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     width: 100%;
-    position: relative;
 }
 
-img.NavIcon {
-    max-height: 28px;
-    max-width: 28px;
-    transition: all 250ms;
+div.NavList div {
+    flex: 1 1 auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 ul.NavList, ul.NavIconList{
@@ -33,51 +37,68 @@ ul.NavList, ul.NavIconList{
     align-items: center;
 }
 
+span#hContact {
+    text-align: left;
+    flex: 6 4 auto;
+    padding-left: 45px;
+}
+
 ul.NavList {
-    flex: 1 0 40px;
-    flex-shrink: 0.5;
-    max-width: 42.5%;
-    justify-content: space-between;
-    padding-right: 47px;
+    padding-left: 10px;
+    flex: 1 1 auto;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding-right: 10px;
     font-family: 'Rubik';
     font-style: normal;
-    font-size: clamp(30px, 40px, 50px);
     line-height: 47px;
     letter-spacing: 0.15em;
 }
 
-ul.NavIconList {
-    /* padding: 0px; */
-    gap: 14px;
-    max-width: 30%;
-    /* justify-content: space-between; */
-    transform: scale(1);
-    padding-right: 35px;
-}
-
-.NavLink {
+a.NavLink {
     color:#fff;
     font-family: var(--rubik-mono), 'san-serif';
-    font-size: 28px;
+    font-size: clamp(20px, 2vw, 50px);
     letter-spacing: 0px;
-    /* padding: 5px 30px; */
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
 }
 
-.NavLink::after {
-    content: "";
-    display: block;
+a.NavLink::after {
+    display: block;    
     position: absolute;
+    content: "";
     left: 30px;
-    right:35px;
+    bottom: 0;
+    right: 30px;
     height: 2px;
     background-color: #adc7ad;
     opacity: 0;
     transform-origin: center;
     transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     transform: scaleX(0);
+}
+
+a.NavLink:hover::after {
+    cursor: pointer;
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+ul.NavIconList {
+    gap: 14px;
+    padding-right: 45px;
+}
+
+img.NavIcon {
+    max-height: 28px;
+    max-width: 28px;
+    transform: scale(1);
+}
+
+img.NavIcon:hover {
+    transform: scale(1.2);
 }
 
 .NavIconList li.NavLItem:nth-child(4) {
@@ -110,8 +131,40 @@ ul.NavIconList {
     opacity: 0.9;
 }
 
-.NavLink:hover::after {
-    cursor: pointer;
-    transform: scaleX(1);
-    opacity: 1;
+/* MENU TOGGLE */
+div.NavList.menu span#hContact {
+    padding: 0;
+}
+
+div.NavList.menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+}
+
+img#menuIcon {
+    position: absolute;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    flex: 1 0 auto;
+}
+
+li.NavMItem {
+    width: 100%;
+    list-style: none;
+    background-color: var(--header-bg);
+}
+
+div.NavList.menu a {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+ul.NavIconList.menu {
+    width: 100%;
+    background-color: var(--header-bg);
+    justify-content: center;
+    padding: 0;
 }
