@@ -18,7 +18,7 @@ function Footer() {
 function ContactForm() {
     const [state, handleSubmit] = useForm("mgejwkbp");
     if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+        return <div className="FooterSubmit">Thank you for contacting me! I hope to get back to you within a couple days. Checkout me out on my other socials as well!</div>;
     }
     return (
         <form onSubmit={handleSubmit}>

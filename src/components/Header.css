@@ -6,11 +6,8 @@ div.NavBar {
     position: fixed;
     z-index: 10;
     width: 100%;
-    height: 64px;
+    height: 75px;
     background-color: var(--header-bg);
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
 
 div.NavList {
@@ -40,7 +37,18 @@ ul.NavList, ul.NavIconList{
 span#hContact {
     text-align: left;
     flex: 6 4 auto;
-    padding-left: 45px;
+    margin-left: 45px;
+    min-width: 140px;
+}
+
+span#hContact a {
+    padding: 2.5px 7.5px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+span#hContact a:hover {
+    background-color: var(--project-bg);
 }
 
 ul.NavList {
@@ -132,9 +140,6 @@ img.NavIcon:hover {
 }
 
 /* MENU TOGGLE */
-div.NavList.menu span#hContact {
-    padding: 0;
-}
 
 div.NavList.menu {
     flex-direction: column;
@@ -151,20 +156,40 @@ img#menuIcon {
     flex: 1 0 auto;
 }
 
-li.NavMItem {
-    width: 100%;
-    list-style: none;
-    background-color: var(--header-bg);
-}
-
 div.NavList.menu a {
     font-size: 15px;
     line-height: 20px;
 }
 
-ul.NavIconList.menu {
-    width: 100%;
-    background-color: var(--header-bg);
-    justify-content: center;
-    padding: 0;
+@media screen and (max-width: 700px) {
+    div.NavBar {
+        height: 50px;
+    }
+
+    div.NavList.menu {
+        position: relative;
+        height: fit-content;
+        display: flex;
+        padding-top: 15px;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        background-color: var(--header-bg);
+    }
+
+    li.NavMItem {
+        width: 100%;
+        list-style: none;
+        background-color: var(--header-bg);
+    }
+
+    li.NavMItem a {
+        font-size: 20px;
+    }
+
+    span#hContact {
+        position: absolute;
+        left: 0px;
+        top: 14.5px;
+    }
 }

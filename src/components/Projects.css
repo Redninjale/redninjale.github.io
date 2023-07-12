@@ -61,6 +61,15 @@ div.Project-title h1 {
   opacity: 1;
 }
 
+.Project-title h1.bottom {
+  top: 1000px;
+  left:-130px;
+}
+
+div h1.bottom.show {
+  top: 1520px;
+}
+
 div.Project-title h1.is-sticky {
   position: fixed;
   top: 220px;
@@ -68,15 +77,6 @@ div.Project-title h1.is-sticky {
   opacity: 1;
   animation: all 600ms ease-in-out 0s normal none 1 running;
   z-index: 10;
-}
-
-div.Project-title h1.bottom.show {
-  top: 1720px;
-}
-
-div.Project-title h1.bottom {
-  top: 1000px;
-  left:-130px;
 }
 
 div.Project-title div {
