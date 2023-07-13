@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Header.css'
 
 function Header() {
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState(true);
     const [menuToggle, setMenuToggle] = useState(true);
 
     function toggleMenu() {
@@ -24,10 +24,10 @@ function Header() {
         window.addEventListener('load', menuConfig);
         window.addEventListener('resize', menuConfig);
     }, []);
+
     return (
         <div className='NavBar'>
             <div className='NavList'>
-                {/* <Link to="/"><img className='NavLogo' src= "./largerlogo.png" type="image/png" alt="Logo" /></Link> */}
                 {menuToggle && <span id="hContact"><a className='NavLink' href='#Contact'>Contact</a></span>}
                 
                 {menu ?

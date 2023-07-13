@@ -8,11 +8,10 @@
 
 /* Personal Projects */
 div.PersonalContainer {
-  /* background: linear-gradient(var(--blue-bg), #a0a4b9, var(--blue-bg)); */
   background-color: #ffffff;
   height: 1240px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
 }
 
@@ -227,4 +226,45 @@ ul.CardList li.show div {
     left: -340px;
   }
 }
-/*250+45-6*/
+@media screen and (max-width: 700px) {
+  ul.CardList li {
+    margin: 0 18%;
+  }
+
+  ul.CardList li:nth-child(odd) div {
+    width: 300px;
+    transform: translate3d(362px, 0, 0);
+  }
+
+  ul.CardList li:nth-child(even) div {
+    width: 300px;
+    transform: translate3d(-23px, 0, 0);
+  }
+
+  div.PersonalContainer {
+    height: 1520px;
+  }
+
+  div.Project-title h1 {
+    font-size: 60px;
+    left: -120px;
+  }
+
+  div.Project-title div {
+    display: none;
+    left: 75px;
+  }
+
+  .Project-title h1.bottom {
+    top: 1320px;
+    left:-120px;
+  }
+
+  div h1.bottom.show {
+    top: 2090px;
+  }
+
+  div.Project-title h1.is-sticky {
+    left: -120px;
+  }
+}

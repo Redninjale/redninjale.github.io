@@ -67,20 +67,31 @@ function Projects() {
             // console.log("SCROLL:" + window.scrollY);
             // console.log("TOP:" + headerTop);
             // console.log("BOT:" + headerBot);
-            if (header && headerTop !== undefined && headerBot!== undefined && window.scrollY >= headerTop - 60 && 
-                ((window.scrollY <= headerBot - 450 && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
-                (window.scrollY <= headerBot + 225 && document.querySelector("div.PersonalContainer").classList.contains("show")))) {
-                if(!header.classList.contains("is-sticky")) {
-                    header.classList.add("is-sticky");
-                }
-            } else {
-                if(header.classList.contains("is-sticky")) {
-                    header.classList.remove("is-sticky");
-                }
-                if(header && headerBot && window.scrollY >= headerBot - 450) {
-                    header.classList.add("bottom");
-                } else if(header.classList.contains("bottom")) {
-                    header.classList.remove("bottom");
+            let offset = window.innerWidth <= 700 ? 400 : 225;
+            let offset2 = window.innerWidth <= 700 ? 410 : 450;
+            if(header && headerTop && headerBot && headerTop !== undefined && headerBot!== undefined) {
+                console.log("HEADER" + headerBot);
+                console.log("WINDOW: " + window.scrollY);
+                console.log(headerBot + offset2);
+                if (window.scrollY >= headerTop - 60 && 
+                    ((window.scrollY <= headerBot - offset && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
+                    (window.scrollY <= headerBot + offset2 && document.querySelector("div.PersonalContainer").classList.contains("show")))) {
+                    if(!header.classList.contains("is-sticky")) {
+                        header.classList.add("is-sticky");
+                    }
+                    if(header.classList.contains("bottom")) {
+                        header.classList.remove("bottom");
+                    }
+                } else {
+                    if(header.classList.contains("is-sticky")) {
+                        header.classList.remove("is-sticky");
+                    }
+                    if((window.scrollY > headerBot - offset - 50 && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
+                        (window.scrollY > headerBot + offset2 - 50 && document.querySelector("div.PersonalContainer").classList.contains("show"))) {
+                        header.classList.add("bottom");
+                    } else if(header.classList.contains("bottom")) {
+                        header.classList.remove("bottom");
+                    }
                 }
             }
         }

@@ -84,14 +84,16 @@ function Home() {
         return i * 900;
       }
     });
-    tl.add({
-      targets: "h1.HomeIntro span",
-      translateY: [0,30],
-      opacity: [1,0],
-      delay: function(el, i) {
-        return i * 100;
-      }
-    }, 9000);
+    if(window.innerWidth > 700) {
+      tl.add({
+        targets: "h1.HomeIntro span",
+        translateY: [0,30],
+        opacity: [1,0],
+        delay: function(el, i) {
+          return i * 100;
+        }
+      }, 9000);
+    }
   }, [])
   return (
     <div id='Home' className='HomeContainer'>

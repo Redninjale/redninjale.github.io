@@ -129,3 +129,29 @@ button:hover {
 div.FooterContainer a {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 700px) {
+
+    div.FooterContainer h1 {
+        letter-spacing: 2px;
+        font-size: 40px;
+        line-height: 25px;
+        width: 100%;
+    }
+    
+    div.FooterContainer span {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    div.FooterContainer span b {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    form div {
+        grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto 25px auto 25px auto auto;
+
+    }
+}

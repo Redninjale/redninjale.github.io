@@ -22,32 +22,61 @@ function ContactForm() {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            {window.innerWidth <= 700 ?
+                <div>
+                    <label htmlFor="firstName">
+                        First Name *
+                    </label>
 
-                <label htmlFor="firstName">
-                    First Name *
-                </label>
+                    <input required id="firstName" type="text" name="firstName" />
 
-                <label htmlFor="lastName">
-                    Last Name *
-                </label>
+                    <ValidationError
+                        prefix="First Name"
+                        field="firstName"
+                        errors={state.errors}
+                    />
 
-                <input required id="firstName" type="text" name="firstName" />
+                    <label htmlFor="lastName">
+                        Last Name *
+                    </label>
 
-                <ValidationError
-                    prefix="First Name"
-                    field="firstName"
-                    errors={state.errors}
-                />
 
-                <input required id="lastName" type="text" name="lastName" />
+                    <input required id="lastName" type="text" name="lastName" />
 
-                <ValidationError
-                    prefix="Last Name"
-                    field="lastName"
-                    errors={state.errors}
-                />
-            </div>
+                    <ValidationError
+                        prefix="Last Name"
+                        field="lastName"
+                        errors={state.errors}
+                    />
+                </div>
+                :
+                <div>
+                    <label htmlFor="firstName">
+                        First Name *
+                    </label>
+
+                    <label htmlFor="lastName">
+                        Last Name *
+                    </label>
+
+                    <input required id="firstName" type="text" name="firstName" />
+
+                    <ValidationError
+                        prefix="First Name"
+                        field="firstName"
+                        errors={state.errors}
+                    />
+
+                    <input required id="lastName" type="text" name="lastName" />
+
+                    <ValidationError
+                        prefix="Last Name"
+                        field="lastName"
+                        errors={state.errors}
+                    />
+                </div>
+            }
+
 
             <label htmlFor="email">
                 Email *

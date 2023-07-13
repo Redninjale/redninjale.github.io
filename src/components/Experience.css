@@ -38,7 +38,7 @@ div.ExperienceContainer h1 {
 }
 
 .swiper {
-    width: 80%;
+    width: 90%;
     height: 70vh;
     color: #fff;
     border-radius: 10px;
@@ -169,5 +169,58 @@ div.swiper-divider {
 
     div.swiper-context {
         line-height: 13px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    div.ExperienceContent h1 {
+        font-size: 40px;
+    }
+
+    div.swiper {
+        height: 50vh;
+    }
+
+    .swiper-container {
+        flex-direction: column;
+    }
+
+    .swiper-icon {
+        height: 45px;
+        width: 45px;
+    }
+
+    .swiper-title-container {
+        height: fit-content;
+    }
+
+    span.swiper-title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    div.swiper-divider {
+        width: 60%;
+        height: 1px;
+        margin: 5px 0;
+    }
+
+    div.swiper-content {
+        padding-top: 10px;
+        width: 83%;
+    }
+
+    .swiper-subtitle {
+        font-size: 20px;
+    }
+
+    .swiper-context {
+        padding-top: 5px;
+        font-size: 10px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: scale(0.7);
     }
 }
