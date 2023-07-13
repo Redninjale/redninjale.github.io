@@ -11,7 +11,7 @@ div.PersonalContainer {
   background-color: #ffffff;
   height: 1240px;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
 }
 
@@ -85,7 +85,6 @@ div.Project-title div {
   height: 100%;
   top: 30px;
   left: 90px;
-  /* transform: rotate(90deg); */
   border: 2px solid #a6bea6;
   border-radius: 10px;
 }

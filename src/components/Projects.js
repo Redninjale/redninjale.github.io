@@ -67,8 +67,8 @@ function Projects() {
             // console.log("SCROLL:" + window.scrollY);
             // console.log("TOP:" + headerTop);
             // console.log("BOT:" + headerBot);
-            let offset = window.innerWidth <= 700 ? 400 : 225;
-            let offset2 = window.innerWidth <= 700 ? 410 : 450;
+            let offset = window.innerWidth <= 700 ? 400 : 250;
+            let offset2 = window.innerWidth <= 700 ? 410 : 100;
             if(header && headerTop && headerBot && headerTop !== undefined && headerBot!== undefined) {
                 console.log("HEADER" + headerBot);
                 console.log("WINDOW: " + window.scrollY);
@@ -86,8 +86,8 @@ function Projects() {
                     if(header.classList.contains("is-sticky")) {
                         header.classList.remove("is-sticky");
                     }
-                    if((window.scrollY > headerBot - offset - 50 && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
-                        (window.scrollY > headerBot + offset2 - 50 && document.querySelector("div.PersonalContainer").classList.contains("show"))) {
+                    if((window.scrollY > headerBot - offset - 60 && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
+                        (window.scrollY > headerBot + offset2 - 60 && document.querySelector("div.PersonalContainer").classList.contains("show"))) {
                         header.classList.add("bottom");
                     } else if(header.classList.contains("bottom")) {
                         header.classList.remove("bottom");
@@ -95,6 +95,8 @@ function Projects() {
                 }
             }
         }
+        window.addEventListener("load", headerSticky);
+        window.addEventListener("resize", headerSticky);
         window.addEventListener("scroll", headerSticky);
     }, [headerTop, headerBot]);
 
