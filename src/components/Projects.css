@@ -231,12 +231,12 @@ ul.CardList li.show div {
   }
 
   ul.CardList li:nth-child(odd) div {
-    width: 300px;
+    width: 72vw;
     transform: translate3d(362px, 0, 0);
   }
 
   ul.CardList li:nth-child(even) div {
-    width: 300px;
+    width: 72vw;
     transform: translate3d(-23px, 0, 0);
   }
 

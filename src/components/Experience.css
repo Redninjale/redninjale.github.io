@@ -177,12 +177,19 @@ div.swiper-divider {
         font-size: 40px;
     }
 
+    .swiper-slide {
+        background: linear-gradient(90deg, #26272b, #101011, black, #101011, #26272b);
+    }
+
     div.swiper {
-        height: 50vh;
+        height: fit-content;
     }
 
     .swiper-container {
+        justify-content: flex-start;
         flex-direction: column;
+        padding: 20px 0 30px;
+        min-height: 440px;
     }
 
     .swiper-icon {
@@ -192,6 +199,8 @@ div.swiper-divider {
 
     .swiper-title-container {
         height: fit-content;
+        width: 83%;
+        justify-content: flex-start;
     }
 
     span.swiper-title {
@@ -200,9 +209,10 @@ div.swiper-divider {
     }
 
     div.swiper-divider {
-        width: 60%;
+        width: 80%;
         height: 1px;
         margin: 5px 0;
+        justify-content: flex-start;
     }
 
     div.swiper-content {

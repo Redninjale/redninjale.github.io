@@ -270,7 +270,7 @@ div.HomeStackElement {
         width: 100%;
         justify-content: center;
         padding: 0;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     div.HomeNameContainer div {
@@ -279,7 +279,7 @@ div.HomeStackElement {
 
     h1.HomeWelcome span, h1.HomeIntro span {
         font-size: 23px;
-        line-height: 25px;
+        line-height: 40px;
     }
 
     h1.HomeIntro {
@@ -293,13 +293,14 @@ div.HomeStackElement {
     }
 
     img.HomeImage {
-        height: 150px;
-        width: 150px;
+        margin: 20px 0 5px;
+        height: 200px;
+        width: 200px;
     }
 
     div.HomeContent {
         padding-top: 0px;
-        padding-left: 58px;
+        padding-left: 14%;
         margin-top: 20px;
         width: 86%;
     }
@@ -310,7 +311,7 @@ div.HomeStackElement {
     }
 
     div.HomeContent h3 {
-        font-size: 9px;
+        font-size: 10px;
         padding-bottom: 14px;
     }
 
@@ -319,8 +320,8 @@ div.HomeStackElement {
     }
 
     div.HomeContent p, div.HomeContent p b {
-        font-size: 9px;
-        letter-spacing: 0.2em;
+        font-size: 10px;
+        letter-spacing: 0.19em;
     }
 
     img.NavIcon {
@@ -329,12 +330,12 @@ div.HomeStackElement {
     }
 
     div.HomeProjects {
-        font-size: 14px;
+        font-size: 13px;
         padding-left: 0px;
     }
 
     div.HomeProjects h2 {
-        padding-left: 58px;
+        padding-left: 14%;
     }
 
     div.HomeSkills {
