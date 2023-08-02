@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
     margin: 0px;
+    color: #1c1c1c;
 }
 
 div.HomeContainer {
     width: 100vw;
     padding-top: 50px;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
 }
 
 a {
@@ -23,7 +24,7 @@ div.HomeNameContainer {
     width: 40%;
     margin-top: 2.5%;
     padding-top: 35px;
-    padding-left: 7.5%;
+    margin-left: auto;
     display: flex;
     flex-direction: column;
     font-family: 'Rubik Mono One', sans-serif;
@@ -105,9 +106,8 @@ img.HomeImage {
 }
 
 div.HomeContent {
-    width: 50%;
-    color: black;
-    padding-left: 7.5%;
+    width: 40%;
+    margin-right: auto;
     margin-top: 2.5%;
     padding-top: calc(55px + 100vw * 0.0125);
     height: fit-content;
@@ -116,7 +116,6 @@ div.HomeContent {
 h2,
 h3,
 p {
-    color: black;
     font-family: var(--rubik);
 }
 
@@ -145,7 +144,6 @@ div.HomeContent p {
 div.HomeContent p b {
     font-family: var(--rubik);
     font-size: min(1.2vw, 7.5em);
-    color: black;
     font-weight: 500;
     text-transform: capitalize;
 }
@@ -203,7 +201,6 @@ ul.HomeIconList {
 /* Recent Projects */
 div.HomeProjects {
     margin-top: 10px;
-    color: black;
     width: 100%;
 }
 

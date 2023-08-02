@@ -57,15 +57,15 @@ function Home() {
       translateY: [30, 0],
       opacity: [0, 1],
       delay: function(el, i) {
-        return i * 100;
+        return i * 150;
       }
-    }, 900);
+    }, 250);
     tl.add({
       targets: "h1.HomeIntro span",
       translateY: [30, 0],
       opacity: [0, 1],
       delay: function(el, i) {
-        return i * 100;
+        return i * 150;
       },
     });
     tl.add({
@@ -73,7 +73,7 @@ function Home() {
       translateY: [30,0],
       opacity: [0,1],
       delay: function(el, i) {
-        return i * 200;
+        return i * 150;
       }
     });
     tl.add({
@@ -110,11 +110,10 @@ function Home() {
         </div>
 
         <div className='HomeContent'>
-          <h2>Software engineer</h2>
-          <h3>UI/UX, Backend, Data analytics</h3>
-          <p>Howdy! I'm a <b>Computer Science student at Texas A&M University</b>. I plan on pursuing a Bachelors in Science. 
-          I love to create and design using code. I am also an avid indoor rock climber and traveler.</p>
-          <p>The industries that I have worked for include <b>Software Engineering</b> and Embedded Systems. I spent 2022 summer working for <b>NASA</b> Johnson Space Center for software engineering. I actively participated
+          <h2>Software Developer</h2>
+          <h3>Fullstack, Data analytics</h3>
+          <p>Howdy! I'm a <b>Computer Science student at Texas A&M University</b>. I am pursuing a Bachelors in Science. I love to create and design using code. I am also an avid indoor rock climber and traveler.</p>
+          <p>The industries that I have worked for include <b>Software Engineering</b> and Embedded Systems. I spent 2022 summer working for <b>NASA</b> JSC for software engineering. I actively participated
            in <b>robotics</b> from 2018-2022. At A&M, I am in <b>Aggie Coding Club</b> and <b>Aggie Data Science club</b> to collaborate
              and push for an environment that excels.</p>
           <p id="last">My <b>future direction</b> is currently in developing myself as a <b>full-stack</b> developer learning <b>figma</b> designing, <b>databases</b>, <b>caching</b>

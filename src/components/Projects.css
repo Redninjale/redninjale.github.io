@@ -4,11 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   margin-top: 0px;
+  color: #1c1c1c;
 }
 
 /* Personal Projects */
 div.PersonalContainer {
-  background-color: #ffffff;
+  background-color: #f1f1f1;
   height: 1240px;
   position: relative;
   overflow: hidden;
@@ -20,7 +21,7 @@ div.PersonalContainer.show {
 }
 
 div.More {
-  background: linear-gradient(#fff,#fff, #fff, rgb(204, 204, 204));
+  background: linear-gradient(#f1f1f1,#f1f1f1, #f1f1f1, rgb(204, 204, 204));
   width: 100%;
   text-align: center;
   font-family: var(--rubik);

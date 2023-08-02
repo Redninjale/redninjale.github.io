@@ -38,7 +38,7 @@ div.ExperienceContainer h1 {
 }
 
 .swiper {
-    width: 90%;
+    width: 70%;
     height: 70vh;
     color: #fff;
     border-radius: 10px;
@@ -63,7 +63,7 @@ img.swiper-slide {
 }
 
 span.swiper-pagination-bullet {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .swiper-button-next,
@@ -94,8 +94,10 @@ span.swiper-pagination-bullet {
 }
 
 .swiper-title-container {
-    width: 35%;
+    max-width: 35%;
+    width: fit-content;
     font-family: var(--rubik), 'sans-serif';
+    margin-right: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,15 +106,16 @@ span.swiper-pagination-bullet {
 }
 
 .swiper-icon {
+    display: inline-flex;
     aspect-ratio: 1/1;
-    width: 30%;
+    width: 25%;
     opacity: 100%;
 }
 
 .swiper-title {
+    display: inline-flex;
     font-size: clamp(30px, 4vw, 60px);
     height: 75%;
-    /* font-size: 4vw; */
     color: #fff;
     display: flex;
     align-items: center;
@@ -122,7 +125,7 @@ span.swiper-pagination-bullet {
 div.swiper-content {
     width: 55%;
     height: 100%;
-    padding-top: calc(4.5% + 20px);
+    padding-top: calc(3.5%);
     justify-content: center;
     text-align: left;
     align-items: center;
@@ -139,8 +142,7 @@ div.swiper-content {
 }
 
 div.swiper-divider {
-    margin-left: 25px;
-    margin-right: 35px;
+    margin-right: 45px;
     content: "";
     border: 2px solid #fff;
     height: 70%;
