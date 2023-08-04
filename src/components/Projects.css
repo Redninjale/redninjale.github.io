@@ -6,6 +6,7 @@ div.PersonalContainer {
   position: relative;
   overflow: hidden;
   width: 100%;
+  scroll-snap-align: start;
 }
 
 div.PersonalContainer.show {
@@ -22,7 +23,7 @@ div.More {
 
 div.More.show {
   transform: rotate(180deg);
-  background: #fff;
+  background: #f1f1f1;
 }
 
 div.More img {

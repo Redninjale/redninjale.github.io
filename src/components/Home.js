@@ -8,7 +8,6 @@ function Home() {
     var chao = document.querySelector(".HomeWelcome");
     var intro = document.querySelector(".HomeIntro");
     var name = document.querySelector("h1.HomeName");
-    // var comp = false;
 
     if(chao && intro && name) {
       console.log(intro.innerHTML);

@@ -8,7 +8,6 @@ function Header() {
     function toggleMenu() {
         setMenuToggle(!menuToggle);
     }
-
     useEffect(() => {
         const menuConfig = () => {
             if (window.innerWidth <= 700) {
@@ -23,45 +22,47 @@ function Header() {
         }
         window.addEventListener('load', menuConfig);
         window.addEventListener('resize', menuConfig);
-    }, []);
+    }, [menu, menuToggle]);
 
     return (
         <div className='NavBar'>
             <div className='NavList'>
                 {menuToggle && <span id="hContact"><a className='NavLink' href='#Contact'>Contact</a></span>}
-                
+
                 {menu ?
                     <>
-                        <img id="menuIcon" 
-                            onClick={toggleMenu} 
-                            src={(menuToggle ? "menu.svg" : "cross.svg")} 
+                        <img id="menuIcon"
+                            onClick={toggleMenu}
+                            src={(menuToggle ? "menu.svg" : "cross.svg")}
                             alt=""
-                            style= {{
+                            style={{
                                 width: menuToggle ? 25 : 15,
                                 height: menuToggle ? 25 : 15,
                                 top: menuToggle ? 13 : 18.5,
                                 right: menuToggle ? 40 : 45
                             }}
-                            
-                            />
+
+                        />
                         {(!menuToggle && <Menurender />)}
                     </>
                     :
                     (
-                        <div style={{paddingRight: 45}}>
+                        <div style={{ paddingRight: 45 }}>
                             <ul className='NavList'>
                                 <li className='NavLItem'><a className='NavLink' href='#Home'>Home</a></li>
                                 <li className='NavLItem'><a className='NavLink' href='#Experience'>Experience</a></li>
                                 <li className='NavLItem'><a className='NavLink' href='#Projects'>Projects</a></li>
                             </ul>
-                            <SocialRender color="black"/>
+                            <SocialRender color="black" />
                         </div>
                     )
                 }
             </div>
         </div>
-    )
+    );
 }
+
+
 
 const Menurender = () => {
     return (
@@ -69,12 +70,12 @@ const Menurender = () => {
             <li className='NavMItem'><a className='NavLink' href='#Home'>Home</a></li>
             <li className='NavMItem'><a className='NavLink' href='#Experience'>Experience</a></li>
             <li className='NavMItem'><a className='NavLink' href='#Projects'>Projects</a></li>
-            <SocialRender color="black"/>
+            <SocialRender color="black" />
         </>
     );
 }
 
-function SocialRender({color}) {
+function SocialRender({ color }) {
     return (
         <ul style={{
             display: "flex",
@@ -84,7 +85,7 @@ function SocialRender({color}) {
             backgroundColor: "var(--header-bg)",
             justifyContent: "center",
             gap: "10px"
-        }}>
+        }} className='socials' >
             <li className='NavLItem'><a href="https://drive.google.com/file/d/1UjRLHpH7fCXiAwW9umaZJpG4hgLzOsOT/view?usp=sharing" target="_blank" rel="noreferrer" ><img className='NavIcon' src="./resume.svg" type="image/svg" alt="Logo" /></a></li>
             <li className='NavLItem'><a href="https://github.com/Redninjale" target="_blank" rel="noreferrer"><img className='NavIcon' src="./github.svg" type="image/svg" alt="Logo" /></a></li>
             <li className='NavLItem'><a href="https://www.linkedin.com/in/cameron-le-09430a24a/" target="_blank" rel="noreferrer"><img className='NavIcon' src="./linkedin.svg" type="image/svg" alt="Logo" /></a></li>

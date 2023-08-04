@@ -1,8 +1,5 @@
-* {
-    transition: all 250ms;
-}
-
 div.NavBar {
+    transition: all 250ms;
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -191,5 +188,9 @@ div.NavList.menu a {
         position: absolute;
         left: 0px;
         top: 14.5px;
+    }
+
+    .socials {
+        padding: 0;
     }
 }
