@@ -1,6 +1,6 @@
 import React from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react';
-import { Pagination, Navigation, Autoplay, EffectFade } from 'swiper';
+import { Pagination, Navigation, EffectFade } from 'swiper';
 import 'swiper/css';
 import 'swiper/swiper-bundle.css';
 import './Experience.css'
