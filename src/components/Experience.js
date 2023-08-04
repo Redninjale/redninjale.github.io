@@ -50,7 +50,7 @@ function Slider() {
               I focused on a <b>QtWidget</b> project that <b>optimizes the bill of material verification process</b>. Using EEE-INST-002 derating standards,
               we created an interactive app for NASA engineers to upload their bill of materials and analyze any extensive or inappropriate use of 
               electrical components. 
-                </div> 
+                </div>
                 <div className='swiper-context'>
                 We recieved <b>large support</b> after pitching this project to <b>50 NASA engineers</b> for 
               advise and fine-tuning the interactive elements.

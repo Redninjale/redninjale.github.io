@@ -143,9 +143,9 @@ div.swiper-divider {
 }
 
 .swiper-context {
-    padding-top: 25px;
     font-size: clamp(12px, 1.1vw, 16px);
     color: #fff;
+    padding-top: 2.5vh;
 }
 
 .swiper-content b {
@@ -162,7 +162,6 @@ div.swiper-divider {
 
     div.swiper-context {
         line-height: 13px;
-        padding-top: 3vh;
     }
 }
 
@@ -207,7 +206,6 @@ div.swiper-divider {
     }
 
     div.swiper-content {
-        padding-top: 10px;
         width: 83%;
         height: fit-content;
     }
@@ -217,12 +215,30 @@ div.swiper-divider {
     }
 
     .swiper-context {
-        padding-top: 5px;
+        padding-top: 1.5vh;
         font-size: 9px;
     }
 
     .swiper-button-next,
     .swiper-button-prev {
         transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .swiper {
+        width: 90%;
+    }
+    span.swiper-title {
+        font-size: 25px;
+    }
+
+    .swiper-subtitle {
+        font-size: 13px;
+    }
+
+    .swiper-context {
+        padding-top: 1.5vh;
+        font-size: 8px;
     }
 }
