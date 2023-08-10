@@ -22,7 +22,7 @@ div.More {
 }
 
 div.More.show {
-  transform: rotate(180deg);
+  rotate: 180deg;
   background: #f1f1f1;
 }
 
@@ -49,24 +49,14 @@ div.Project-title h1 {
   left: -130px;
   height: fit-content;
   width: fit-content;
-  transform: rotate(-90deg);
+  rotate: -90deg;
   margin-top: 0;
   opacity: 1;
-}
-
-.Project-title h1.bottom {
-  top: 1000px;
-  left:-130px;
-}
-
-div h1.bottom.show {
-  top: 1520px;
 }
 
 div.Project-title h1.is-sticky {
   position: fixed;
   top: 220px;
-  left: -130px;
   opacity: 1;
   animation: all 600ms ease-in-out 0s normal none 1 running;
   z-index: 10;
@@ -107,6 +97,12 @@ ul.CardList li::after {
   left:50%;
   transform: translateX(-50%);
   bottom: 50%;
+}
+
+ul.CardList a img {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 ul.CardList li.hover::after {
@@ -213,25 +209,26 @@ ul.CardList li.show div {
 
 @media screen and (max-width: 1300px) {
   ul.CardList li div {
-    width: 300px;
+    width: 35vw;
   }
   ul.CardList li:nth-child(odd) div {
-    left: -340px;
+    left: -38vw;
   }
 }
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 850px) {
   ul.CardList li {
-    margin: 0 18%;
+    margin: 0 80px;
   }
 
   ul.CardList li:nth-child(odd) div {
     width: 72vw;
-    transform: translate3d(362px, 0, 0);
+    left: 7vw;
   }
 
   ul.CardList li:nth-child(even) div {
     width: 72vw;
-    transform: translate3d(-23px, 0, 0);
+    left: 7vw;
   }
 
   div.PersonalContainer {
@@ -247,17 +244,47 @@ ul.CardList li.show div {
     display: none;
     left: 75px;
   }
+}
 
-  .Project-title h1.bottom {
-    top: 1320px;
-    left:-120px;
+@media screen and (max-width: 500px){
+  div.Project-title h1 {
+    transform: scale(0.85);
   }
 
-  div h1.bottom.show {
-    top: 2090px;
+  div.Project-title h1.is-sticky{
+    top: 150px;
+  }
+
+  ul.CardList li {
+    margin: 0 65px;
+  }
+
+  ul.CardList li::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 350px){
+  div.Project-title h1 {
+    transform: scale(0.7);
+  }
+
+  div.Project-title h1 {
+    font-size: 60px;
+    left: -130px;
   }
 
   div.Project-title h1.is-sticky {
-    left: -120px;
+    top: 130px;
+  }
+
+  ul.CardList li {
+    margin: 0 50px;
+  }
+
+  ul.CardList li::after {
+    width: 15px;
+    height: 15px;
   }
 }

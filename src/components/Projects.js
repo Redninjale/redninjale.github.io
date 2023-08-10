@@ -3,8 +3,8 @@ import { projText } from '../Constants';
 import './Projects.css';
 
 function Projects() {
-    const [headerBot, setHeaderBot] = useState(undefined);
     const [headerTop, setHeaderTop] = useState(undefined);
+    const [headerHeight, setHeaderHeight] = useState(undefined);
 
     function showMore() {
         var container = document.querySelector("div.PersonalContainer div.Project-title h1");
@@ -58,47 +58,52 @@ function Projects() {
     });
 
     useEffect(() => {
-        const headerEl = document.querySelector("div.PersonalContainer").getBoundingClientRect();
-        setHeaderBot(headerEl.bottom);
-        setHeaderTop(headerEl.top);
+        var headerEl = document.querySelector("div.PersonalContainer").getBoundingClientRect();
+        if(!headerTop) {
+            setHeaderTop(headerEl.top);
+        }
 
         function headerSticky() {
-            var header = document.querySelector("div.PersonalContainer div.Project-title h1");
-            // console.log("SCROLL:" + window.scrollY);
-            // console.log("TOP:" + headerTop);
-            // console.log("BOT:" + headerBot);
-            let offset = window.innerWidth <= 700 ? 400 : 250;
-            let offset2 = window.innerWidth <= 700 ? 410 : 100;
-            if(header && headerTop && headerBot && headerTop !== undefined && headerBot!== undefined) {
-                console.log("HEADER" + headerBot);
+            headerEl = document.querySelector("div.PersonalContainer").getBoundingClientRect();
+            var header = document.querySelector("div.Project-title h1");
+            if(headerEl.height !== headerHeight) {
+                setHeaderHeight(headerEl.height);
+            }
+
+            if(header && headerTop && headerHeight && headerTop !== undefined && headerHeight !== undefined) {
+                // 44 is the show more height
+                var headerBot = headerTop + headerHeight + 44;
+                console.log("TOP:" + headerTop);
+                console.log("BOT " + headerBot);
+                console.log("HEIGHT " + headerEl.height);
                 console.log("WINDOW: " + window.scrollY);
-                console.log(headerBot + offset2);
-                if (window.scrollY >= headerTop - 60 && 
-                    ((window.scrollY <= headerBot - offset && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
-                    (window.scrollY <= headerBot + offset2 && document.querySelector("div.PersonalContainer").classList.contains("show")))) {
+                console.log("HEADERH: " + header.getBoundingClientRect().height);
+
+                if (window.scrollY >= headerTop && 
+                    //Checks from nothing to sticky
+                    window.scrollY <= headerBot - header.getBoundingClientRect().height) {
                     if(!header.classList.contains("is-sticky")) {
                         header.classList.add("is-sticky");
+                        header.style.top = "";
                     }
-                    if(header.classList.contains("bottom")) {
-                        header.classList.remove("bottom");
-                    }
+
                 } else {
+                    //Change from sticky to bottom or nothing
                     if(header.classList.contains("is-sticky")) {
                         header.classList.remove("is-sticky");
                     }
-                    if((window.scrollY > headerBot - offset - 60 && !document.querySelector("div.PersonalContainer").classList.contains("show")) ||
-                        (window.scrollY > headerBot + offset2 - 60 && document.querySelector("div.PersonalContainer").classList.contains("show"))) {
-                        header.classList.add("bottom");
-                    } else if(header.classList.contains("bottom")) {
-                        header.classList.remove("bottom");
-                    }
+
+                    //Checks for bottom or nothing
+                    if(window.scrollY > headerBot - header.getBoundingClientRect().height) {
+                        header.style.top = `${headerHeight - header.getBoundingClientRect().height + 100 - 44}px`;
+                    } 
                 }
             }
         }
         window.addEventListener("load", headerSticky);
         window.addEventListener("resize", headerSticky);
         window.addEventListener("scroll", headerSticky);
-    }, [headerTop, headerBot]);
+    }, [headerHeight, headerTop]);
 
     return (
         <div className='ProjectsContainer'>
@@ -111,24 +116,37 @@ function Projects() {
                 <ul className='CardList'>
                     <Card 
                         time={projText.revtube.time}
+                        href={projText.revtube.href}
                         photo={projText.revtube.photo}
                         description={projText.revtube.description}
                         framework={projText.revtube.framework}/>
                     <Card
+                        time={projText.americanAirlines.time}
+                        href={projText.americanAirlines.href}
+                        photo={projText.americanAirlines.photo}
+                        description={projText.americanAirlines.description}
+                        framework={projText.americanAirlines.framework}/>
+                    <Card
                         time={projText.aggieNews.time}
+                        href={projText.aggieNews.href}
                         photo={projText.aggieNews.photo}
                         description={projText.aggieNews.description}
                         framework={projText.aggieNews.framework}/>
                     <Card
                         time={projText.disneyPlusClone.time}
+                        href={projText.disneyPlusClone.href}
+                        photo={projText.disneyPlusClone.photo}
                         description={projText.disneyPlusClone.description}
                         framework={projText.disneyPlusClone.framework}/>
                     <Card
                         time={projText.peariscope.time}
+                        href={projText.peariscope.href}
                         description={projText.peariscope.description}
                         framework={projText.peariscope.framework}/>
                     <Card
                         time={projText.bb8.time}
+                        href={projText.bb8.href}
+                        photo={projText.bb8.photo}
                         description={projText.bb8.description}
                         framework={projText.bb8.framework}/>
                 </ul>
@@ -143,6 +161,7 @@ function Card(prop) {
         <li className='CardItem'>
             <div>
                 <time>{prop.time}</time>
+                <a href={prop.href} rel="noreferrer" target='_blank'><img src="./arrow-up-right-from-square.svg" alt="No Redirect"/></a>
                 <img src={prop.photo} className={prop.photo ? "ShowImg" : "HideImg"} alt="Not Projecting" type="jpg" />
                 <p>{prop.description ? prop.description : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, "
                 + "sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim "
