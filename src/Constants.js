@@ -17,7 +17,7 @@ export const projText = {
     },
     aggieNews: {
         time:"2022 Fall Aggie News",
-        href: "https://github.com/Redninjale/ai-ggie-news-flask",
+        href: "https://github.com/aggie-coding-club/ai-ggie-news",
         photo:"AN_projects.png",
         description:"A website webscraping Aggie-related news websites to centralize and provide preference "
         + "for selective news. Using the doc2vec API and google's recommendors library, the website analyzes personal preferences from surveys to curate "
