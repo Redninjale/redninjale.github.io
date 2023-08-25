@@ -3,7 +3,7 @@ div.NavBar {
     position: fixed;
     z-index: 10;
     width: 100%;
-    height: 75px;
+    height: 65px;
     background-color: var(--header-bg);
 }
 

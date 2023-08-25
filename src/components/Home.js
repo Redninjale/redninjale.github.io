@@ -104,18 +104,20 @@ function Home() {
           </div>
           <h1 className='HomeName'>Cameron Le</h1>
           <div>
-            <img className='HomeImage' src="./portrait_3.jpg" alt="Not Working" />
+            <img className='HomeImage' src="./portrait_4.jpg" alt="Not Working" />
           </div>
         </div>
 
         <div className='HomeContent'>
           <h2>Software Developer</h2>
           <h3>Fullstack, Data analytics</h3>
-          <p>Howdy! I'm a <b>Computer Science student at Texas A&M University</b>. I am pursuing a Bachelors in Science. I love to create and design using code. I am also an avid indoor rock climber and traveler.</p>
-          <p>The industries that I have worked for include <b>Software Engineering</b> and Embedded Systems. I spent 2022 summer working for <b>NASA</b> JSC for software engineering. I actively participated
-           in <b>robotics</b> from 2018-2022. At A&M, I am in <b>Aggie Coding Club</b> and <b>Aggie Data Science club</b> to collaborate
-             and push for an environment that excels.</p>
-          <p id="last">My <b>future direction</b> is currently in developing myself as a <b>full-stack</b> developer learning <b>figma</b> designing, <b>databases</b>, <b>caching</b>
+          <p>Howdy! I'm a <b>Computer Science student at Texas A&M University</b>(B.S). I love to read light novels, boulder, and traveler.</p>
+          <p><b>Software Engineering/Embedded Systems</b>:
+            <li><b>FRC Robotics</b> from 2018-2022</li>
+            <li><b>NASA</b> JSC for software engineering in Summer 2022</li>
+            <li><b>Aggie Coding</b> and <b>Aggie Data Science</b> club to expand and collaborate with developers</li>
+             </p>
+          <p id="last">My <b>future direction</b> is as a <b>full-stack</b> developer learning <b>figma</b> designing, <b>databases</b>, <b>caching</b>
           , <b>ORM/ODM</b>, and <b>cloud</b>.</p>
 
           <ul className='HomeIconList'>

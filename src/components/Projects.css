@@ -1,3 +1,8 @@
+#Projects {
+  position: absolute;
+  top: -65px;
+}
+
 /* Personal Projects */
 div.PersonalContainer {
   color: #1c1c1c;
@@ -35,11 +40,6 @@ div.More img {
 
 div.More img:hover {
   cursor: pointer;
-}
-
-#Projects {
-  position: absolute;
-  top: -75px;
 }
 
 div.Project-title h1 {
