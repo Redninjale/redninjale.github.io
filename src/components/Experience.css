@@ -172,7 +172,7 @@ div.swiper-divider {
     }
 
     .swiper-slide {
-        background: linear-gradient(90deg, #26272b, #101011, black, #101011, #26272b);
+        background: linear-gradient(90deg, #26272b, #000000, black, #000000, #26272b);
     }
 
     div.swiper {
