@@ -8,7 +8,7 @@ function Header() {
     function toggleMenu() {
         setMenuToggle(!menuToggle);
     }
-    
+
     useEffect(() => {
         const menuConfig = () => {
             if (window.innerWidth <= 700) {
@@ -30,7 +30,7 @@ function Header() {
             <div className='NavList'>
                 {menuToggle && <span id="hContact"><a className='NavLink' href='#Contact'>Contact</a></span>}
 
-                {menu ?
+                {(menu && window.innerWidth <= 700) ?
                     <>
                         <img id="menuIcon"
                             onClick={toggleMenu}
@@ -42,7 +42,6 @@ function Header() {
                                 top: menuToggle ? 13 : 18.5,
                                 right: menuToggle ? 40 : 45
                             }}
-
                         />
                         {(!menuToggle && <Menurender />)}
                     </>
