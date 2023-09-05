@@ -313,7 +313,7 @@ div.HomeStackElement {
 
     div.HomeContent h2 {
         font-size: 18px;
-        line-height: 20px;
+        line-height: 25px;
     }
 
     div.HomeContent h3 {
@@ -326,8 +326,8 @@ div.HomeStackElement {
     }
 
     div.HomeContent p, div.HomeContent p b {
-        font-size: 10px;
-        letter-spacing: 0.19em;
+        font-size: 11px;
+        letter-spacing: 0.15em;
     }
 
     img.NavIcon {
@@ -342,17 +342,20 @@ div.HomeStackElement {
 
     div.HomeProjects h2 {
         padding-left: 14%;
+        font-size: 18px;
     }
 
     div.HomeSkillsContainer {
         gap: 15px;
+        width: 100%;
     }
 
     div.HomeSkills {
         padding-bottom: 10px;
+        width: 70%;
     }
 
     .HomeSkills-stack div.HomeStackElement {
-        font-size: 8px;
+        font-size: 12px;
     }
 }

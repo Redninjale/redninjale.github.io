@@ -214,6 +214,9 @@ ul.CardList li.show div {
   ul.CardList li:nth-child(odd) div {
     left: -38vw;
   }
+  span.CardFrameItem {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -244,6 +247,14 @@ ul.CardList li.show div {
     display: none;
     left: 75px;
   }
+
+  span.CardFrameItem {
+    margin-top: 10px;
+  }
+  
+  img.ShowImg {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -262,6 +273,18 @@ ul.CardList li.show div {
   ul.CardList li::after {
     width: 20px;
     height: 20px;
+  }
+
+  div span.CardFrame {
+    margin-top: 5px;
+  }
+
+  div span.CardFrame span.CardFrameItem {
+    margin-top: 5px;
+  }
+
+  img.ShowImg {
+    width: 100%;
   }
 }
 
@@ -286,5 +309,15 @@ ul.CardList li.show div {
   ul.CardList li::after {
     width: 15px;
     height: 15px;
+  }
+  div span.CardFrame {
+    margin-top: 5px;
+  }
+  div span.CardFrame span.CardFrameItem {
+    margin-top: 5px;
+  }
+
+  img.ShowImg {
+    width: 100%;
   }
 }

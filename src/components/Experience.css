@@ -177,6 +177,7 @@ div.swiper-divider {
 
     div.swiper {
         height: 50vh;
+        width: 85%;
     }
 
     .swiper-container {

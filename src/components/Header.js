@@ -8,6 +8,7 @@ function Header() {
     function toggleMenu() {
         setMenuToggle(!menuToggle);
     }
+    
     useEffect(() => {
         const menuConfig = () => {
             if (window.innerWidth <= 700) {

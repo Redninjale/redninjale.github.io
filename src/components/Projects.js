@@ -73,11 +73,11 @@ function Projects() {
             if(header && headerTop && headerHeight && headerTop !== undefined && headerHeight !== undefined) {
                 // 44 is the show more height
                 var headerBot = headerTop + headerHeight + 44;
-                console.log("TOP:" + headerTop);
-                console.log("BOT " + headerBot);
-                console.log("HEIGHT " + headerEl.height);
-                console.log("WINDOW: " + window.scrollY);
-                console.log("HEADERH: " + header.getBoundingClientRect().height);
+                // console.log("TOP:" + headerTop);
+                // console.log("BOT " + headerBot);
+                // console.log("HEIGHT " + headerEl.height);
+                // console.log("WINDOW: " + window.scrollY);
+                // console.log("HEADERH: " + header.getBoundingClientRect().height);
 
                 if (window.scrollY >= headerTop && 
                     //Checks from nothing to sticky
