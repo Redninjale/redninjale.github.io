@@ -27,10 +27,10 @@ function Header() {
 
     return (
         <div className='NavBar'>
-            <div className='NavList'>
+            <div className={'NavList' + (window.innerWidth <= 700 ? ' menu' : '')}>
                 {menuToggle && <span id="hContact"><a className='NavLink' href='#Contact'>Contact</a></span>}
 
-                {(menu && window.innerWidth <= 700) ?
+                {menu ?
                     <>
                         <img id="menuIcon"
                             onClick={toggleMenu}
@@ -43,7 +43,14 @@ function Header() {
                                 right: menuToggle ? 40 : 45
                             }}
                         />
-                        {(!menuToggle && <Menurender />)}
+                        {(!menuToggle &&
+                        <>
+                            <li className='NavMItem'><a className='NavLink' href='#Home'>Home</a></li>
+                            <li className='NavMItem'><a className='NavLink' href='#Experience'>Experience</a></li>
+                            <li className='NavMItem'><a className='NavLink' href='#Projects'>Projects</a></li>
+                            <SocialRender color="black" />
+                        </>
+                        )}
                     </>
                     :
                     (
@@ -59,19 +66,6 @@ function Header() {
                 }
             </div>
         </div>
-    );
-}
-
-
-
-const Menurender = () => {
-    return (
-        <>
-            <li className='NavMItem'><a className='NavLink' href='#Home'>Home</a></li>
-            <li className='NavMItem'><a className='NavLink' href='#Experience'>Experience</a></li>
-            <li className='NavMItem'><a className='NavLink' href='#Projects'>Projects</a></li>
-            <SocialRender color="black" />
-        </>
     );
 }
 

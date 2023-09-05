@@ -169,7 +169,7 @@ function Card(prop) {
                 </p>
                 <span className="CardFrame">
                     {prop.framework ? prop.framework.map((e) => {
-                        return (<span className="CardFrameItem">{e}</span>);
+                        return (<span key={e} className="CardFrameItem">{e}</span>);
                     }) : <span></span>}
                 </span>
             </div>

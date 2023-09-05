@@ -10,7 +10,7 @@ function Home() {
     var name = document.querySelector("h1.HomeName");
 
     if(chao && intro && name) {
-      console.log(intro.innerHTML);
+      // console.log(intro.innerHTML);
       chao.innerHTML = chao.innerHTML.replace("<span class='spacing'></span>", " ");
       intro.innerHTML = intro.innerHTML.replace("<span class='spacing'></span>", " ");
       name.innerHTML = name.innerHTML.replace("<span class='spacing'></span>", " ");
