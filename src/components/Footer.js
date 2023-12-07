@@ -6,10 +6,11 @@ function Footer() {
     return (
         <div className='FooterContainer' id="Footer">
             <div id="Contact"></div>
+            <div>UNDER CONSTRUCTION</div>
             <h1>Contact Me!</h1>
             <span>feel free to reach out to me</span>
             <div className="FooterContent">
-                <ContactForm />
+                {/* <ContactForm /> */}
             </div>
         </div>
     )

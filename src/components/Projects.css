@@ -7,14 +7,16 @@
 div.PersonalContainer {
   color: #1c1c1c;
   background-color: #f1f1f1;
-  height: 1240px;
+  /* height: 1240px; */
+  padding-bottom: 20px;
   position: relative;
   overflow: hidden;
   width: 100%;
   scroll-snap-align: start;
+  padding-top: 20px;
 }
 
-div.PersonalContainer.show {
+/* div.PersonalContainer.show {
   height: fit-content;
 }
 
@@ -40,13 +42,13 @@ div.More img {
 
 div.More img:hover {
   cursor: pointer;
-}
+} */
 
 div.Project-title h1 {
   position: absolute;
   color: #a6bea6;
   top: 150px;
-  left: -130px;
+  left: -120px;
   height: fit-content;
   width: fit-content;
   rotate: -90deg;
@@ -66,18 +68,18 @@ div.Project-title div {
   content: "";
   position: absolute;
   overflow: hidden;
-  height: 100%;
+  height: 95%;
   top: 30px;
   left: 90px;
   border: 2px solid #a6bea6;
   border-radius: 10px;
 }
 
-ul.CardList {
+/* ul.CardList {
   padding: 20px 0;
-}
+} */
 
-ul.CardList li {
+/* ul.CardList li {
   position:relative;
   list-style-type: none;
   width: 6px;
@@ -103,9 +105,9 @@ ul.CardList a img {
   position: absolute;
   right: 15px;
   top: 15px;
-}
+} */
 
-ul.CardList li.hover::after {
+/* ul.CardList li.hover::after {
   background: #ffeed0;
   border: 4px solid #a6bea6;
   transform: translateX(-50%);
@@ -124,31 +126,40 @@ ul.CardList li div{
   border-radius: 5px;
   bottom: 0;
   background: #a6bea6;
-}
+} */
 
-ul.CardList li:nth-child(even) div {
+/* ul.CardList li:nth-child(even) div {
   left: 45px;
 }
 
 ul.CardList li:nth-child(odd) div {
   left: -545px;
-}
+} */
 
 time {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+time span {
+  flex: 1;
   font-weight: 400;
   color: #fff;
   text-transform: uppercase;
   font-family: var(--rubik);
   font-size: 20px;
-  display: block;
-  margin-bottom: 10px;
 }
 
-li.CardItem p {
+div.CardItem p {
   color: #ffffff;
   font-weight: 300;
   font-family: var(--rubik);
-  font-size: 17.5px;
+  font-size: 15px;
+  flex: 1;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 img.HideImg {
@@ -159,20 +170,23 @@ img.HideImg {
 
 img.ShowImg {
   visibility: visible;
-  height: 50%;
-  width: 70%;
+  /* height: 50%; */
+  margin: 0 auto 5px;
+  width: 80%;
+  /* aspect-ratio: 2/1; */
+  max-height: 50%;
   object-fit: cover;
   border-radius: 5px;
-  margin-bottom: 10px;
+  /* margin-bottom: 5px; */
 }
 
-ul.CardList li div {
+/* ul.CardList li div {
   visibility: hidden;
   opacity: 0;
   transition: all .6s ease-in-out;
-}
+} */
 
-li.CardItem div span.CardFrame {
+div.CardItem div span.CardFrame {
   width: 100%;
   display: flex;
   align-items: center;
@@ -185,7 +199,8 @@ li.CardItem div span.CardFrame {
 }
 
 span.CardFrame span.CardFrameItem {
-  margin-top: 15px;
+  margin-top: 5px;
+  font-size: 15px;
   background-color: #fff;
   border-radius: 10px;
   padding: 2.5px 5px 2.5px 5px;
@@ -193,22 +208,92 @@ span.CardFrame span.CardFrameItem {
   text-transform: uppercase;
 }
 
-ul.CardList li:nth-child(odd) div {
+/* ul.CardList li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
 }
 
 ul.CardList li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
-}
+} */
 
-ul.CardList li.show div {
+/* ul.CardList li.show div {
   transform: none;
   visibility: visible;
   opacity: 1;
+} */
+
+div.CardItem {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  background-color: #a6bea6;
+}
+
+.grid-wrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+  grid-column: span 4;
+  grid-row: span 5;
+}
+
+.grid-wrapper > div > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-wrapper {
+  margin: auto;
+  width: 70%;
+  /* height: 1350px; */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(8, 1fr);
+  /* grid-template-rows: repeat(6, 1fr); */
+  grid-auto-rows: 50px;
+  grid-auto-flow: dense;
+}
+
+.grid-wrapper .wide {
+  grid-column: span 5;
+}
+
+.grid-wrapper .skinny {
+  grid-column: span 3;
+  grid-row: span 7;
+}
+
+.grid-wrapper div:nth-child(6)  {
+  /* grid-column: span 3; */
+  grid-row: span 7;
+}
+
+.grid-wrapper div:nth-child(3)  {
+  /* grid-column: span 3; */
+  grid-row: span 6;
+}
+
+/* .grid-wrapper .tall {
+  grid-row: span 2;
+} */
+
+/* .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+} */
+
+.grid-wrapper .short {
+  grid-row: span 4;
 }
 
 @media screen and (max-width: 1300px) {
-  ul.CardList li div {
+  /* ul.CardList li div {
     width: 35vw;
   }
   ul.CardList li:nth-child(odd) div {
@@ -216,11 +301,22 @@ ul.CardList li.show div {
   }
   span.CardFrameItem {
     margin-top: 10px;
+  } */
+
+  div.Project-title h1 {
+    /* font-size: 60px; */
+    left: -115px;
   }
 }
 
-@media screen and (max-width: 850px) {
-  ul.CardList li {
+@media screen and (max-width: 1100px) {
+  .grid-wrapper {
+    grid-auto-rows: 55px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* ul.CardList li {
     margin: 0 80px;
   }
 
@@ -232,11 +328,11 @@ ul.CardList li.show div {
   ul.CardList li:nth-child(even) div {
     width: 72vw;
     left: 7vw;
-  }
+  } */
 
-  div.PersonalContainer {
+  /* div.PersonalContainer {
     height: 1520px;
-  }
+  } */
 
   div.Project-title h1 {
     font-size: 60px;
@@ -247,17 +343,29 @@ ul.CardList li.show div {
     display: none;
     left: 75px;
   }
+  .grid-wrapper {
+    width: 80%;
+    grid-auto-rows: 62px;
+  }
 
-  span.CardFrameItem {
+  span.CardFrame span.CardFrameItem {
+    font-size: 10px;
+  }
+
+
+
+  /* span.CardFrameItem {
     margin-top: 10px;
   }
   
   img.ShowImg {
     width: 100%;
-  }
+  } */
 }
 
-@media screen and (max-width: 500px){
+
+
+@media screen and (max-width: 600px){
   div.Project-title h1 {
     transform: scale(0.85);
   }
@@ -266,7 +374,7 @@ ul.CardList li.show div {
     top: 150px;
   }
 
-  ul.CardList li {
+  /* ul.CardList li {
     margin: 0 65px;
   }
 
@@ -281,7 +389,18 @@ ul.CardList li.show div {
 
   div span.CardFrame span.CardFrameItem {
     margin-top: 5px;
+  } */
+
+  .grid-wrapper {
+    width: 82%;
+    margin-left: 14%;
+    display: flex;
+    flex-direction: column;
   }
+
+  /* .grid-wrapper .wide {
+    grid-column: span 1;
+  } */
 
   img.ShowImg {
     width: 100%;

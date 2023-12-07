@@ -8,13 +8,13 @@ div.ExperienceAnchor {
 h1 {
     font-family: var(--rubik), "sans-serif";
     text-align: center;
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 400;
     letter-spacing: 0px;
     text-transform: uppercase;
     color: #fff;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 /* Professional Experiences */
@@ -33,11 +33,12 @@ div.ExperienceContainer h1 {
 
 .swiper {
     width: 70%;
-    height: 70vh;
-    min-height: 495px;
+    height: 75vh;
+    /* min-height: 495px; */
     color: #fff;
     border-radius: 10px;
     position: relative;
+    /* max-height: 700px; */
 }
 
 img.swiper-slide {
@@ -176,7 +177,7 @@ div.swiper-divider {
     }
 
     div.swiper {
-        height: 50vh;
+        height: 90vh;
         width: 85%;
     }
 
@@ -216,9 +217,10 @@ div.swiper-divider {
         font-size: 15px;
     }
 
-    .swiper-context {
+    div.swiper-context {
         padding-top: 1.5vh;
-        font-size: 9px;
+        line-height: 20px;
+        font-size: 12px;
     }
 
     .swiper-button-next,

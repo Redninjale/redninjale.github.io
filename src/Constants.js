@@ -19,18 +19,16 @@ export const projText = {
         time:"2022 Fall Aggie News",
         href: "https://github.com/aggie-coding-club/ai-ggie-news",
         photo:"AN_projects.png",
-        description:"A website webscraping Aggie-related news websites to centralize and provide preference "
-        + "for selective news. Using the doc2vec API and google's recommendors library, the website analyzes personal preferences from surveys to curate "
-        + "news articles for Aggies. SQL and python flask are the backend to store login authentication and process preferences.",
-        framework:["Team-20", "html/css/js", "react", "SQL", "flask", "python3", "axios", "doc2vec", "selenium"]
+        description:"Webscraping Aggie-related news websites to curate personalized pages for Aggies. "
+        + "We use doc2vec API and google's recommendors libraries to analyze surveys."
+        + "As well as, implemented a SQL and python flask are the backend to store login authentication and process preferences.",
+        framework:["Team-20", "html/css/js", "react", "SQL", "python flask", "axios", "doc2vec", "selenium"]
     },
     disneyPlusClone: {
         time:"2022 Disney Plus Clone", 
         href: "https://github.com/Redninjale/Disney-plus-clone",
         photo:"DPC_projects.png",
-        description:"A website webscraping Aggie-related news websites to centralize and provide preference "
-        + "for selective news. Using the doc2vec API and google's recommendors library, the website analyzes personal preferences from surveys to curate "
-        + "news articles for Aggies. SQL and python flask are the backend to store login authentication and process preferences.",
+        description:"Independent project to learn react and redux. I created a disney plus clone with a firebase backend to store user authentication and firebase storage for video storage. ",
         framework:["html/css/js", "react", "redux"]
     },
     peariscope: {

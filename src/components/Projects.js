@@ -73,10 +73,10 @@ function Projects() {
             if(header && headerTop && headerHeight && headerTop !== undefined && headerHeight !== undefined) {
                 // 44 is the show more height
                 var headerBot = headerTop + headerHeight + 44;
-                console.log("TOP:" + headerTop);
-                console.log("BOT " + headerBot);
-                console.log("HEIGHT " + headerEl.height);
-                console.log("WINDOW: " + window.scrollY);
+                // console.log("TOP:" + headerTop);
+                // console.log("BOT " + headerBot);
+                // console.log("HEIGHT " + headerEl.height);
+                // console.log("WINDOW: " + window.scrollY);
 
                 // console.log("HEADERH: " + header.getBoundingClientRect().height);
 
@@ -114,24 +114,27 @@ function Projects() {
                     <h1>Projects</h1>
                     <div></div>
                 </div>
-                <ul className='CardList'>
+                <div className='grid-wrapper'>
                     <Card 
                         time={projText.revtube.time}
                         href={projText.revtube.href}
                         photo={projText.revtube.photo}
                         description={projText.revtube.description}
+                        size={"wide"}
                         framework={projText.revtube.framework}/>
                     <Card
                         time={projText.americanAirlines.time}
                         href={projText.americanAirlines.href}
                         photo={projText.americanAirlines.photo}
                         description={projText.americanAirlines.description}
+                        size={"skinny"}
                         framework={projText.americanAirlines.framework}/>
                     <Card
                         time={projText.aggieNews.time}
                         href={projText.aggieNews.href}
                         photo={projText.aggieNews.photo}
                         description={projText.aggieNews.description}
+                        size={"big"}
                         framework={projText.aggieNews.framework}/>
                     <Card
                         time={projText.disneyPlusClone.time}
@@ -143,26 +146,31 @@ function Projects() {
                         time={projText.peariscope.time}
                         href={projText.peariscope.href}
                         description={projText.peariscope.description}
+                        size={"short"}
                         framework={projText.peariscope.framework}/>
                     <Card
                         time={projText.bb8.time}
                         href={projText.bb8.href}
                         photo={projText.bb8.photo}
+                        size={"small"}
                         description={projText.bb8.description}
                         framework={projText.bb8.framework}/>
-                </ul>
+                </div>
             </div>
-            <div className="More"><img src="down-arrow.svg" onClick={() => {showMore();}} alt="Bad down"></img></div>
+            {/* <div className="More"><img src="down-arrow.svg" onClick={() => {showMore();}} alt="Bad down"></img></div> */}
         </div>
     )
 }
 
 function Card(prop) {
     return (
-        <li className='CardItem'>
+        <div className={'CardItem' + " " + (prop.size ? prop.size : "") }>
             <div>
-                <time>{prop.time}</time>
-                <a href={prop.href} rel="noreferrer" target='_blank'><img src="./arrow-up-right-from-square.svg" alt="No Redirect"/></a>
+                <time>
+                    <span>{prop.time}</span>
+                    <a href={prop.href} rel="noreferrer" target='_blank'><img src="./arrow-up-right-from-square.svg" alt="No Redirect"/></a>
+
+                </time>
                 <img src={prop.photo} className={prop.photo ? "ShowImg" : "HideImg"} alt="Not Projecting" type="jpg" />
                 <p>{prop.description ? prop.description : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, "
                 + "sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim "
@@ -174,7 +182,7 @@ function Card(prop) {
                     }) : <span></span>}
                 </span>
             </div>
-        </li>
+        </div>
     );
 }
 
