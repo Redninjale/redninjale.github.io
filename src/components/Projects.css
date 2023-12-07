@@ -275,7 +275,7 @@ div.CardItem {
   grid-row: span 8;
 }
 
-.grid-wrapper div:nth-child(6) img  {
+.grid-wrapper div:nth-child(6) img.ShowImg  {
   width: 60%;
   /* aspect-ratio: 2/1; */
 }
