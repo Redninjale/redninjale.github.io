@@ -172,12 +172,13 @@ img.ShowImg {
   visibility: visible;
   /* height: 50%; */
   margin: 0 auto 5px;
-  width: 80%;
+  width: 70%;
   /* aspect-ratio: 2/1; */
-  max-height: 50%;
+  max-height: 100%;
   object-fit: cover;
   border-radius: 5px;
   /* margin-bottom: 5px; */
+  object-position: top;
 }
 
 /* ul.CardList li div {
@@ -250,7 +251,7 @@ div.CardItem {
 
 .grid-wrapper {
   margin: auto;
-  width: 70%;
+  width: 60%;
   /* height: 1350px; */
   display: grid;
   gap: 20px;
@@ -262,6 +263,7 @@ div.CardItem {
 
 .grid-wrapper .wide {
   grid-column: span 5;
+  grid-row: span 6;
 }
 
 .grid-wrapper .skinny {
@@ -270,12 +272,15 @@ div.CardItem {
 }
 
 .grid-wrapper div:nth-child(6)  {
-  /* grid-column: span 3; */
-  grid-row: span 7;
+  grid-row: span 8;
+}
+
+.grid-wrapper div:nth-child(6) img  {
+  width: 60%;
+  /* aspect-ratio: 2/1; */
 }
 
 .grid-wrapper div:nth-child(3)  {
-  /* grid-column: span 3; */
   grid-row: span 6;
 }
 
@@ -307,11 +312,16 @@ div.CardItem {
     /* font-size: 60px; */
     left: -115px;
   }
+
+  .grid-wrapper {
+    width: 80%;
+    margin-left: 12.5%;
+  }
 }
 
 @media screen and (max-width: 1100px) {
   .grid-wrapper {
-    grid-auto-rows: 55px;
+    grid-auto-rows: 52px;
   }
 }
 
@@ -345,14 +355,12 @@ div.CardItem {
   }
   .grid-wrapper {
     width: 80%;
-    grid-auto-rows: 62px;
+    grid-auto-rows: 50px;
   }
 
   span.CardFrame span.CardFrameItem {
     font-size: 10px;
   }
-
-
 
   /* span.CardFrameItem {
     margin-top: 10px;
@@ -365,7 +373,7 @@ div.CardItem {
 
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
   div.Project-title h1 {
     transform: scale(0.85);
   }
