@@ -3,8 +3,8 @@ export const projText = {
         time:"2023 RevTube",
         href: "https://github.com/aggie-coding-club/RevTube",
         photo:"RT_projects.png",
-        description:"Revtube is a aggie coding club project with a team of 10 to design a youtube alternative. Using a Firebase storage for video upload and for "
-        + "google authentication with nodejs. I managed the major components design and integration.",
+        description:"RevTube is an Aggie Coding Club project with a team of 10 to design a Youtube alternative. Using a Firebase storage for video upload and for "
+        + "Google authentication with Nodejs. I managed the major components design and integration.",
         framework: ["html/css/js", "svelte", "firebase", "Figma"]
     },
     americanAirlines: {
@@ -20,7 +20,7 @@ export const projText = {
         href: "https://github.com/aggie-coding-club/ai-ggie-news",
         photo:"AN_projects.png",
         description:"Webscraping Aggie-related news websites to curate personalized pages for Aggies. "
-        + "We use doc2vec API and google's recommendors libraries to analyze surveys."
+        + "We use doc2vec API and Google's recommendors libraries to analyze surveys."
         + "As well as, implemented a SQL and python flask are the backend to store login authentication and process preferences.",
         framework:["Team-20", "html/css/js", "react", "SQL", "python flask", "axios", "doc2vec", "selenium"]
     },

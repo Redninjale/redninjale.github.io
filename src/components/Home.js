@@ -111,17 +111,17 @@ function Home() {
         <div className='HomeContent'>
           <h2>Software Developer</h2>
           <h3>Fullstack, Data analytics</h3>
-          <p>Howdy! I'm a <b>Computer Science student at Texas A&M University</b>(B.S). I love to read light novels, boulder, and traveler.</p>
+          <p>Howdy! I'm a <b>Computer Science student at Texas A&M University</b>(B.S). I love to read light novels, boulder, and travel.</p>
           <p><b>Software Engineering/Embedded Systems</b>:
             <li><b>FRC Robotics</b> from 2018-2022</li>
             <li><b>NASA</b> JSC for software engineering in Summer 2022</li>
             <li><b>Aggie Coding</b> and <b>Aggie Data Science</b> club to expand and collaborate with developers</li>
              </p>
-          <p id="last">My <b>future direction</b> is as a <b>full-stack</b> developer learning <b>figma</b> designing, <b>databases</b>, <b>caching</b>
-          , <b>ORM/ODM</b>, and <b>cloud</b>.</p>
+          <p id="last">My <b>future direction</b> is as a <b>full-stack</b> developer dabbling in artificial intelligence and learning <b>figma</b> design, <b>databases</b>, 
+          <b>system Architecture</b>, <b>caching</b>, <b>ORM/ODM</b>, and <b>cloud</b>.</p>
 
           <ul className='HomeIconList'>
-            <li className='NavLItem'><a href="https://drive.google.com/file/d/1UjRLHpH7fCXiAwW9umaZJpG4hgLzOsOT/view?usp=sharing" target="_blank" rel="noreferrer" ><img className='NavIcon' src= "./resume_black.svg" type="image/svg" alt="Logo" /></a></li>
+            <li className='NavLItem'><a href="https://drive.google.com/file/d/1c9spBN8biglPfgxReQAalOXm3JC64_hI/view?usp=sharing" target="_blank" rel="noreferrer" ><img className='NavIcon' src= "./resume_black.svg" type="image/svg" alt="Logo" /></a></li>
             <li className='NavLItem'><a href="https://github.com/Redninjale" target="_blank" rel="noreferrer"><img className='NavIcon' src= "./github_black.svg" type="image/svg" alt="Logo" /></a></li>
             <li className='NavLItem'><a href="https://www.linkedin.com/in/cameron-le-09430a24a/" target="_blank" rel="noreferrer"><img className='NavIcon' src= "./linkedin_black.svg" type="image/svg" alt="Logo" /></a></li>
             <li className='NavLItem' value="white"><img className='NavIcon email' onClick={() => email('white')} src= "./email_black.svg" type="image/svg" alt="Logo" /></li>
