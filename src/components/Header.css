@@ -7,6 +7,10 @@ div.NavBar {
     background-color: var(--header-bg);
 }
 
+img#menuIcon {
+    display: none;
+}
+
 div.NavList {
     position: relative;
     display: flex;
@@ -16,7 +20,7 @@ div.NavList {
     width: 100%;
 }
 
-div.NavList div {
+div.NavLContent {
     flex: 1 1 auto;
     position: relative;
     display: flex;
@@ -24,7 +28,7 @@ div.NavList div {
     align-items: center;
 }
 
-ul.NavList, ul.NavIconList{
+ul.NavIconList{
     display: flex;
     height: 100%;
     list-style: none;
@@ -48,16 +52,19 @@ span#hContact {
     background-color: var(--project-bg);
 } */
 
-ul.NavList {
-    padding-left: 10px;
+div.NavLContent {
     flex: 1 1 auto;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-evenly;
-    padding-right: 10px;
     font-family: 'Rubik';
     font-style: normal;
     line-height: 47px;
     letter-spacing: 0.15em;
+    margin-right: 20px;
+}
+
+li.NavLItem {
+    padding-top: 5px;
 }
 
 a.NavLink {
@@ -146,28 +153,30 @@ img.NavIcon:hover {
     }
     
     img#menuIcon {
+        display: block;
         position: absolute;
         right: 40px;
         width: 25px;
         height: 25px;
         flex: 1 0 auto;
+        z-index: 2;
     }
     
-    div.NavList.menu a {
-        font-size: 15px;
-        line-height: 20px;
+    div.NavLContent {
+        display: none;
     }
 
-    div.NavList.menu {
+    div.NavLContent.menu {
+        display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding-top: 10px;
-        position: relative;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
         height: fit-content;
-        display: flex;
         padding-top: 15px;
-        align-items: center;
         text-align: center;
         gap: 10px;
         background-color: var(--header-bg);
