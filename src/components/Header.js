@@ -74,7 +74,7 @@ function SocialRender({ color }) {
     >
       <li className="NavLItem">
         <a
-          href="https://drive.google.com/file/d/1UjRLHpH7fCXiAwW9umaZJpG4hgLzOsOT/view?usp=sharing"
+          href="https://drive.google.com/file/d/13Aa0SC41LbkoF4_wKUVzIIRfLCZGOCQW/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
